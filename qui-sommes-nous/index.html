@@ -528,22 +528,30 @@ footer .leg a{color:inherit;opacity:.85}
   });
 
 
-  // défilement automatique des témoignages
-  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    document.querySelectorAll('.scroller').forEach(function(sc){
-      var pause=false;
-      ['mouseenter','touchstart','focusin'].forEach(function(ev){ sc.addEventListener(ev,function(){pause=true;},{passive:true}); });
-      ['mouseleave','focusout'].forEach(function(ev){ sc.addEventListener(ev,function(){pause=false;}); });
-      sc.addEventListener('touchend',function(){ setTimeout(function(){pause=false;},4000); },{passive:true});
-      setInterval(function(){
-        if(pause || !sc.offsetParent) return;
-        var card=sc.querySelector('.tm'); if(!card) return;
-        var step=card.getBoundingClientRect().width+14;
-        if(sc.scrollLeft+sc.clientWidth >= sc.scrollWidth-8) sc.scrollTo({left:0,behavior:'smooth'});
-        else sc.scrollBy({left:step,behavior:'smooth'});
-      },3500);
-    });
-  }
+  // défilement automatique et continu des témoignages
+  document.querySelectorAll('.scroller').forEach(function(sc){
+    var kids=[].slice.call(sc.children); if(kids.length<2) return;
+    kids.forEach(function(k){ var c=k.cloneNode(true); c.setAttribute('aria-hidden','true'); sc.appendChild(c); });
+    sc.style.scrollSnapType='none';
+    var pos=0, paused=false, visible=true, last=0, timer=null, speed=28;
+    function half(){ return sc.scrollWidth/2; }
+    function hold(){ paused=true; clearTimeout(timer); }
+    function release(ms){ clearTimeout(timer); timer=setTimeout(function(){ pos=sc.scrollLeft; paused=false; }, ms||0); }
+    sc.addEventListener('mouseenter',hold); sc.addEventListener('mouseleave',function(){release(300);});
+    sc.addEventListener('touchstart',hold,{passive:true}); sc.addEventListener('touchend',function(){release(2500);},{passive:true});
+    sc.addEventListener('wheel',function(){hold(); release(2500);},{passive:true});
+    if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ visible=e[0].isIntersecting; }).observe(sc); }
+    function tick(t){
+      var dt=last?Math.min(t-last,64):16; last=t;
+      if(!paused && visible && sc.offsetParent){
+        pos+=speed*dt/1000;
+        var h=half(); if(h>0 && pos>=h) pos-=h;
+        sc.scrollLeft=Math.round(pos);
+      } else if(paused){ var h2=half(); if(h2>0 && sc.scrollLeft>=h2){ sc.scrollLeft-=h2; } }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
   var tl=function(){ if(window.Tally){ Tally.loadEmbeds(); } else { document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e){ e.src=e.dataset.tallySrc; }); } };
   var ts=document.createElement('script'); ts.src='https://tally.so/widgets/embed.js'; ts.onload=tl; ts.onerror=tl; document.body.appendChild(ts);
 })();
