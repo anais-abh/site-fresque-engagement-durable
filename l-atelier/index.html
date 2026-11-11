@@ -387,7 +387,7 @@ footer nav{display:flex;flex-wrap:wrap;gap:16px}
 .ftip small{display:block;font-weight:500;opacity:.85;font-size:.68rem}
 .carte-m figcaption{font-size:.7rem;color:#6b6b80;text-align:center;margin-top:4px}
 @media (max-width:860px){.carte{grid-template-columns:1fr;gap:18px}.carte-m{order:-1}}
-.faq-t{font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--of);margin:22px 0 8px}.faq-t:first-child{margin-top:0}.hero .wrap.form-wrap{align-items:start}.hero .wrap.form-wrap>div:first-child{padding-top:24px}@media(min-width:861px){.hero .wrap.form-wrap>div:first-child{position:sticky;top:96px}}
+.foot-seo{font-size:.72rem;line-height:1.5;opacity:.75;max-width:640px;margin:10px 0 0}.faq-t{font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--of);margin:22px 0 8px}.faq-t:first-child{margin-top:0}.hero .wrap.form-wrap{align-items:start}.hero .wrap.form-wrap>div:first-child{padding-top:24px}@media(min-width:861px){.hero .wrap.form-wrap>div:first-child{position:sticky;top:96px}}
 .odd-ref{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:center;border:1px solid var(--t);border-radius:22px;padding:26px}
 .odd-pts{list-style:none;padding:0;margin-top:16px;display:grid;gap:9px;font-size:.9rem}
 .odd-pts li{padding-left:16px;position:relative}
@@ -424,6 +424,7 @@ footer .leg{display:flex;flex-wrap:wrap;gap:14px;font-size:.76rem}
 footer .leg a{color:inherit;opacity:.85}
 @media (max-width:860px){.legal{grid-template-columns:1fr}.legal aside{display:none}.ltab{display:block;overflow-x:auto}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Fresque de l'Engagement Durable®", "alternateName": ["Fresque de l'Engagement Durable", "atelier ODD", "atelier développement durable"], "serviceType": "Atelier de sensibilisation au développement durable et aux Objectifs de développement durable (ODD)", "provider": {"@type": "Organization", "name": "Institut Citoyen", "url": "https://fresque-engagement-durable.org/"}, "areaServed": "FR", "audience": {"@type": "Audience", "audienceType": "Écoles, collectivités, entreprises (RSE), associations"}, "url": "https://fresque-engagement-durable.org/l-atelier/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce que la Fresque de l'Engagement Durable® ?", "acceptedAnswer": {"@type": "Answer", "text": "Un atelier collaboratif de 2h30 pour comprendre les 17 Objectifs de développement durable (ODD) de l'ONU, voir comment ils sont reliés entre eux, puis passer à l'action. Créé par l'Institut Citoyen, il a déjà réuni plus de 3 000 participant·es dans les écoles, les collectivités, les entreprises et les associations."}}, {"@type": "Question", "name": "Quelle différence avec un atelier climat ?", "acceptedAnswer": {"@type": "Answer", "text": "Le climat est au cœur de l'atelier : c'est l'ODD 13. Mais la Fresque de l'Engagement Durable® le relie aux autres enjeux (eau, santé, éducation, inégalités, biodiversité…) pour donner une vision globale du développement durable. Surtout, chaque groupe repart avec un projet concret et des engagements, pas seulement un constat."}}, {"@type": "Question", "name": "Peut-on l'utiliser dans une démarche RSE ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les ODD sont le cadre de référence de nombreuses entreprises pour structurer leur politique RSE. L'atelier permet d'embarquer les collaborateur·rices, de faire le lien entre leur métier et les grands enjeux, et de faire émerger des actions concrètes. Des organisations comme Deloitte, Vivendi ou Bpifrance l'ont déjà organisé."}}, {"@type": "Question", "name": "Combien de participant·es et combien de temps ?", "acceptedAnswer": {"@type": "Answer", "text": "2h30, jusqu'à 15 participant·es par animateur·rice. Pour un groupe plus grand ou une classe entière, plusieurs animateur·rices interviennent ensemble. L'atelier est accessible dès 10 ans, en présentiel ou en ligne."}}, {"@type": "Question", "name": "Intervenez-vous près de chez moi ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui : notre réseau d'animateur·rices est présent dans 11 régions et en outre-mer, et l'atelier peut aussi se faire à distance. Après votre demande, nous vous recontactons sous 48 heures et l'atelier peut avoir lieu sous 2 à 3 semaines."}}]}</script>
 </head>
 <body>
@@ -444,7 +445,7 @@ footer .leg a{color:inherit;opacity:.85}
     <p class="lede">Le grand jeu du développement durable : un atelier collaboratif où l'on relie les 17 Objectifs de développement durable (ODD) de l'ONU, puis on construit ses propres solutions.</p>
     <div class="facts" style="margin-top:18px"><div><b>2h30</b><span>clé en main</span></div><div><b>42</b><span>cartes</span></div><div><b>17</b><span>ODD de l'ONU</span></div><div><b>10 ans+</b><span>tous publics</span></div></div>
   </div>
-  <div class="ph"><img src="/img/photos/cycle.jpg" alt="Une fresque construite pendant un atelier"></div>
+  <div class="ph"><img fetchpriority="high" src="/img/photos/cycle.jpg" alt="Une fresque construite pendant un atelier"></div>
 </div></header>
 <section style="padding-top:20px"><div class="wrap">
   <div class="head"><span class="k">Le déroulé</span><h2>Trois temps, du constat à l'engagement</h2></div>
@@ -467,7 +468,7 @@ footer .leg a{color:inherit;opacity:.85}
         <li><b>Une carte par objectif :</b> sa définition, un chiffre clé de l'ONU et ses interactions avec les autres ODD.</li>
       </ul>
     </div>
-    <figure><img src="/img/odd-17-objectifs.jpg" alt="Les 17 Objectifs de Développement Durable de l'ONU : pas de pauvreté, faim zéro, bonne santé et bien-être, éducation de qualité, égalité entre les sexes, eau propre et assainissement, énergie propre et d'un coût abordable, travail décent et croissance économique, industrie innovation et infrastructure, inégalités réduites, villes et communautés durables, consommation et production responsables, mesures relatives à la lutte contre les changements climatiques, vie aquatique, vie terrestre, paix justice et institutions efficaces, partenariats pour la réalisation des objectifs"><figcaption>Source : Nations unies</figcaption></figure>
+    <figure><img loading="lazy" decoding="async" src="/img/odd-17-objectifs.jpg" alt="Les 17 Objectifs de Développement Durable de l'ONU : pas de pauvreté, faim zéro, bonne santé et bien-être, éducation de qualité, égalité entre les sexes, eau propre et assainissement, énergie propre et d'un coût abordable, travail décent et croissance économique, industrie innovation et infrastructure, inégalités réduites, villes et communautés durables, consommation et production responsables, mesures relatives à la lutte contre les changements climatiques, vie aquatique, vie terrestre, paix justice et institutions efficaces, partenariats pour la réalisation des objectifs"><figcaption>Source : Nations unies</figcaption></figure>
   </div>
 </div></section>
 <section class="bg-v"><div class="wrap">
@@ -478,10 +479,10 @@ footer .leg a{color:inherit;opacity:.85}
     <div class="co" style="background:#DB005B"><b>1</b><h3>Carte Solution</h3><p>Un canevas inspiré du design thinking pour passer du problème à la solution.</p></div>
   </div>
   <div class="mos" style="margin-top:14px">
-    <img src="/img/photos/adultes-cartes.jpg" alt="Des participant·es relient les cartes">
-    <img src="/img/photos/jeunes-fresque.jpg" alt="Des jeunes posent les cartes ODD autour de la fresque">
-    <img src="/img/photos/certificats.jpg" alt="Remise des certificats d'engagement">
-    <img src="/img/photos/etudiants.jpg" alt="Des étudiant·es dessinent leur fresque">
+    <img loading="lazy" decoding="async" src="/img/photos/adultes-cartes.jpg" alt="Des participant·es relient les cartes">
+    <img loading="lazy" decoding="async" src="/img/photos/jeunes-fresque.jpg" alt="Des jeunes posent les cartes ODD autour de la fresque">
+    <img loading="lazy" decoding="async" src="/img/photos/certificats.jpg" alt="Remise des certificats d'engagement">
+    <img loading="lazy" decoding="async" src="/img/photos/etudiants.jpg" alt="Des étudiant·es dessinent leur fresque">
   </div>
 </div></section>
 <section><div class="wrap">
@@ -511,7 +512,8 @@ footer .leg a{color:inherit;opacity:.85}
 </main>
 <div class="bande4" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <footer><div class="wrap">
-  <img src="/img/institut-citoyen.png" alt="Institut Citoyen">
+  <img loading="lazy" decoding="async" src="/img/institut-citoyen.png" alt="Institut Citoyen">
+  <p class="foot-seo">La Fresque de l'Engagement Durable® est un atelier de sensibilisation aux 17 Objectifs de développement durable (ODD), créé par l'Institut Citoyen, association loi 1901. Ateliers développement durable, RSE et climat pour les écoles, les collectivités, les entreprises et les associations, partout en France.</p>
   <nav><a href="/devenir-animateur/">Devenir animateur·rice</a><a href="/organiser-un-atelier/">Organiser un atelier</a><a href="/l-atelier/">L'atelier</a><a href="/qui-sommes-nous/">Qui sommes-nous</a><a href="/">Espace animateur·rices</a></nav>
   <div class="leg"><a href="/mentions-legales/">Mentions légales</a><a href="/confidentialite/">Politique de confidentialité</a><a href="/cookies/">Cookies</a><a href="/qui-sommes-nous/#presse">Presse</a><span>© 2026 Institut Citoyen, association loi 1901</span></div>
 </div></footer>
