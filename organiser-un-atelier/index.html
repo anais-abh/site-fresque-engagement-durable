@@ -569,7 +569,7 @@ footer .leg a{color:inherit;opacity:.85}
     var kids=[].slice.call(sc.children); if(kids.length<2) return;
     kids.forEach(function(k){ var c=k.cloneNode(true); c.setAttribute('aria-hidden','true'); sc.appendChild(c); });
     sc.style.scrollSnapType='none';
-    var pos=0, paused=false, visible=true, last=0, timer=null, speed=28;
+    var pos=0, paused=false, visible=true, last=0, timer=null, speed=42;
     function half(){ return sc.scrollWidth/2; }
     function hold(){ paused=true; clearTimeout(timer); }
     function release(ms){ clearTimeout(timer); timer=setTimeout(function(){ pos=sc.scrollLeft; paused=false; }, ms||0); }
