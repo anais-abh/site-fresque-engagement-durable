@@ -527,6 +527,23 @@ footer .leg a{color:inherit;opacity:.85}
     }); });
   });
 
+
+  // défilement automatique des témoignages
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.scroller').forEach(function(sc){
+      var pause=false;
+      ['mouseenter','touchstart','focusin'].forEach(function(ev){ sc.addEventListener(ev,function(){pause=true;},{passive:true}); });
+      ['mouseleave','focusout'].forEach(function(ev){ sc.addEventListener(ev,function(){pause=false;}); });
+      sc.addEventListener('touchend',function(){ setTimeout(function(){pause=false;},4000); },{passive:true});
+      setInterval(function(){
+        if(pause || !sc.offsetParent) return;
+        var card=sc.querySelector('.tm'); if(!card) return;
+        var step=card.getBoundingClientRect().width+14;
+        if(sc.scrollLeft+sc.clientWidth >= sc.scrollWidth-8) sc.scrollTo({left:0,behavior:'smooth'});
+        else sc.scrollBy({left:step,behavior:'smooth'});
+      },3500);
+    });
+  }
   var tl=function(){ if(window.Tally){ Tally.loadEmbeds(); } else { document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e){ e.src=e.dataset.tallySrc; }); } };
   var ts=document.createElement('script'); ts.src='https://tally.so/widgets/embed.js'; ts.onload=tl; ts.onerror=tl; document.body.appendChild(ts);
 })();
