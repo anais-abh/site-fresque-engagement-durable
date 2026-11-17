@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espace animateur·rice | Fresque de l'Engagement Durable®</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--o:#F06432;--of:#C94A1C;--ov:#FFF4EE;--op:#FDE3D7;--b:#1E3CDC;--bv:#2FA4FF;--bp:#EAF3FF;--v:#54B435;--vf:#2F7D1E;--vp:#E8F6E2;--m:#DB005B;--mp:#FDE6EF;--r:#FFBEF5;--rp:#FFF1FC;--j:#FABE3C;--jp:#FFF6DF;--c:#C8DCFA;--e:#1D1D1B;--g:#5F5A57;--t:#EFE6E1;--w:1120px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--e);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 22px}
+.k{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--of);display:block;margin-bottom:8px}
+h1{font-weight:900;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.05;letter-spacing:-.03em}
+h2{font-weight:900;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.1;letter-spacing:-.02em}
+h3{font-weight:800;font-size:1rem;line-height:1.25}
+.lede{color:var(--g);max-width:62ch;margin-top:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 16px;border-radius:999px;font-weight:700;font-size:.82rem;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s;background:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--o);color:#fff}.btn-o:hover{background:var(--of)}
+.btn-l{border-color:var(--e);background:#fff}
+.btn-b{background:#fff;color:var(--b);border-color:var(--b)}
+.btn-s{padding:6px 12px;font-size:.76rem}
+/* nav */
+.nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--t)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:.8rem;line-height:1.1;color:var(--of)}
+.logo img{width:38px;height:38px}
+.logo small{display:block;color:var(--g);font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+.who{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:.8rem;font-weight:700;color:var(--g)}
+.who b{background:var(--ov);color:var(--of);padding:5px 10px;border-radius:999px}
+.who button{background:none;border:0;font-size:.76rem;font-weight:700;color:var(--g);text-decoration:underline;cursor:pointer}
+/* onglets */
+.tabs{border-bottom:1px solid var(--t);background:#fff;position:sticky;top:66px;z-index:50}
+.tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+.tabs a{white-space:nowrap;padding:8px 14px;border-radius:999px;font-weight:700;font-size:.84rem;color:var(--g);display:flex;align-items:center;gap:8px}
+.tabs a i{width:10px;height:10px;display:inline-block}
+.tabs a.on{background:var(--e);color:#fff}
+.tabs a:not(.on):hover{background:var(--ov);color:var(--e)}
+.vue{display:none;padding:38px 0 60px}.vue.on{display:block}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:24px}
+.q-tl{border-radius:100% 0 0 0}.q-br{border-radius:0 0 100% 0}.q-tr{border-radius:0 100% 0 0}.rond{border-radius:50%}
+/* accueil */
+.hello{background:linear-gradient(180deg,var(--ov),#fff);border-radius:28px;padding:34px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.tile{border-radius:22px;padding:22px;display:flex;flex-direction:column;gap:8px;min-height:170px;transition:transform .15s;cursor:pointer}
+.tile:hover{transform:translateY(-3px)}
+.tile .n{font-size:2rem;font-weight:900;line-height:1}
+.tile p{font-size:.88rem;color:var(--g)}
+.tile .go{margin-top:auto;font-weight:800;font-size:.82rem}
+.t1{background:var(--o);color:#fff}.t1 p{color:#fff;opacity:.92}
+.t2{background:var(--bp)}.t2 .go{color:var(--b)}
+.t3{background:var(--rp)}.t3 .go{color:var(--m)}
+.next{background:#fff;border-radius:20px;padding:18px;border:1px solid var(--t)}
+.next li{list-style:none;display:flex;gap:12px;padding:10px 0;border-top:1px dashed var(--t);font-size:.88rem}
+.next li:first-child{border-top:0}
+.next .d{flex:none;width:52px;text-align:center;background:var(--ov);border-radius:12px;padding:6px 0;font-weight:900;color:var(--of);line-height:1.1}
+.next .d small{display:block;font-size:.62rem;font-weight:800;text-transform:uppercase}
+.rules{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.rule{background:var(--jp);border-radius:18px;padding:16px;font-size:.85rem;color:var(--g)}
+.rule:nth-child(2){background:var(--bp)}.rule:nth-child(3){background:var(--vp)}.rule:nth-child(4){background:var(--mp)}
+.rule b{display:block;color:var(--e);font-size:1.2rem;font-weight:900}
+/* ateliers */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--t);background:#fff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.78rem;cursor:pointer}
+.chip.on{border-color:var(--e);background:var(--e);color:#fff}
+.missions{display:grid;gap:12px}
+.mi{display:grid;grid-template-columns:86px 1fr auto;gap:18px;align-items:center;border:1px solid var(--t);border-radius:22px;padding:16px 18px;background:#fff}
+.mi .cal{text-align:center;border-radius:16px;padding:10px 0;background:var(--ov);color:var(--of);font-weight:900;line-height:1.05}
+.mi .cal b{display:block;font-size:1.6rem}
+.mi .cal small{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.mi .cal.tbd{background:var(--bp);color:var(--b);font-size:.74rem;padding:14px 4px}
+.mi h3{font-size:1.05rem}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.meta span{font-size:.74rem;font-weight:700;padding:4px 9px;border-radius:999px;background:#F6F2EF;color:var(--g)}
+.mi p{font-size:.85rem;color:var(--g);margin-top:6px}
+.st{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:5px 10px;border-radius:999px;display:inline-block;margin-bottom:8px}
+.st.libre{background:var(--vp);color:var(--vf)}.st.pourvu{background:#F1ECE9;color:var(--g)}.st.bientot{background:var(--jp);color:#9A6A00}
+.mi .act{text-align:right}
+.empty{padding:30px;text-align:center;color:var(--g);border:2px dashed var(--t);border-radius:22px}
+.note{font-size:.8rem;color:var(--g);background:#F8F5F3;border-radius:14px;padding:12px 14px;margin-top:16px}
+.note b{color:var(--e)}
+/* devis */
+.dv{display:grid;grid-template-columns:380px 1fr;gap:24px;align-items:start}
+.fm{background:#fff;border:1px solid var(--t);border-radius:22px;padding:18px;display:grid;gap:10px;position:sticky;top:130px;max-height:calc(100vh - 150px);overflow:auto}
+.fm fieldset{border:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-bottom:12px;border-bottom:1px solid var(--t)}
+.fm fieldset:last-of-type{border-bottom:0}
+.fm legend{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--of);margin-bottom:6px;grid-column:1/-1}
+.fm label{display:flex;flex-direction:column;gap:4px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--g)}
+.fm .full{grid-column:1/-1}
+.fm input,.fm select,.fm textarea{padding:8px 10px;border:2px solid var(--t);border-radius:10px;font-size:.86rem;text-transform:none;letter-spacing:0;font-weight:500;color:var(--e);background:#fff;width:100%}
+.fm input:focus,.fm select:focus{outline:none;border-color:var(--b)}
+.fm .hint{grid-column:1/-1;font-size:.76rem;color:var(--g);background:var(--bp);border-radius:10px;padding:8px 10px}
+.fm .warn{grid-column:1/-1;font-size:.78rem;font-weight:700;color:var(--m);background:var(--mp);border-radius:10px;padding:8px 10px;display:none}
+.fm .btns{display:flex;flex-wrap:wrap;gap:8px}
+.keep{background:var(--vp);border-radius:16px;padding:14px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.84rem;color:var(--g)}
+.keep b{color:var(--e);font-size:1.05rem}
+/* feuille de devis */
+.sheet{background:#fff;border:1px solid var(--t);border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.06);padding:40px 44px;font-size:.82rem;color:var(--e);aspect-ratio:auto}
+.sh-top{display:flex;justify-content:space-between;gap:24px;padding-bottom:20px;border-bottom:3px solid var(--o)}
+.sh-top .me b{font-size:1rem}
+.sh-top .me div,.sh-top .no div{color:var(--g)}
+.sh-top .no{text-align:right}
+.sh-top .no b{display:block;font-size:1.5rem;font-weight:900;color:var(--o);letter-spacing:.02em}
+.sh-two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:22px 0}
+.sh-two>div{background:#FAF7F5;border-radius:10px;padding:14px}
+.sh-two small{display:block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--of);margin-bottom:4px}
+table.lines{width:100%;border-collapse:collapse;margin-top:6px}
+.lines th{font-size:.66rem;text-transform:uppercase;letter-spacing:.08em;text-align:left;color:var(--g);border-bottom:2px solid var(--e);padding:8px 6px}
+.lines td{padding:10px 6px;border-bottom:1px solid var(--t);vertical-align:top}
+.lines td small{display:block;color:var(--g);font-size:.76rem;margin-top:2px}
+.lines .r{text-align:right;white-space:nowrap}
+.tot{margin-left:auto;width:290px;margin-top:14px}
+.tot div{display:flex;justify-content:space-between;padding:6px 6px;border-bottom:1px solid var(--t)}
+.tot .big{border:0;background:var(--o);color:#fff;border-radius:8px;font-weight:900;font-size:.95rem;margin-top:6px;padding:10px}
+.tot .mention{font-size:.72rem;color:var(--g);border:0;justify-content:flex-end}
+.cond{margin-top:22px;font-size:.76rem;color:var(--g)}
+.cond b{color:var(--e);display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.cond p{margin-bottom:4px}
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+.sign div{border:1px solid var(--t);border-radius:10px;padding:12px;min-height:110px;font-size:.76rem;color:var(--g)}
+.sign small{display:block;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--e);font-size:.66rem;margin-bottom:6px}
+.foot-sh{margin-top:20px;padding-top:10px;border-top:1px solid var(--t);text-align:center;font-size:.68rem;color:var(--g)}
+/* outils */
+.search{display:flex;gap:10px;align-items:center;margin-bottom:22px}
+.search input{flex:1;max-width:420px;padding:11px 14px;border:2px solid var(--t);border-radius:999px;font-size:.92rem}
+.search input:focus{outline:none;border-color:var(--b)}
+.dossiers{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.dos{border-radius:24px;padding:22px;background:var(--ov)}
+.dos:nth-child(2){background:var(--bp)}.dos:nth-child(3){background:var(--vp)}.dos:nth-child(4){background:var(--rp)}.dos:nth-child(5){background:var(--jp)}.dos:nth-child(6){background:#F4F1EE}
+.dos-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.dos-h .num{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--of)}
+.dos-h p{font-size:.84rem;color:var(--g);margin-top:4px}
+.dos-h a{flex:none;font-size:.74rem;font-weight:800;color:var(--g);text-decoration:underline}
+.files{list-style:none;display:grid;gap:6px}
+.files a{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:9px 12px;font-size:.86rem;font-weight:600;transition:transform .12s}
+.files a:hover{transform:translateX(3px)}
+.files .ty{flex:none;font-size:.6rem;font-weight:900;letter-spacing:.06em;width:38px;text-align:center;padding:4px 0;border-radius:6px;color:#fff;background:var(--o)}
+.ty.doc{background:var(--b)}.ty.vid{background:var(--m)}.ty.dir{background:var(--g)}.ty.img{background:var(--vf)}
+.files em{margin-left:auto;font-style:normal;font-size:.72rem;color:var(--g);font-weight:700}
+.files li.sub{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--g);margin:8px 0 2px}
+.region{display:flex;gap:8px;align-items:center;background:#fff;border-radius:12px;padding:6px 6px 6px 12px}
+.region select{flex:1;border:0;font-size:.86rem;font-weight:600;background:none;padding:4px}
+.hide{display:none!important}
+/* gate */
+.gate{position:fixed;inset:0;z-index:100;background:linear-gradient(160deg,var(--ov),#fff 55%,var(--bp));display:grid;place-items:center;padding:22px}
+.gate-c{background:#fff;border-radius:28px;padding:32px;max-width:440px;width:100%;box-shadow:0 24px 60px rgba(30,60,220,.08);text-align:center}
+.gate-c img{width:64px;margin:0 auto 14px}
+.gate-c p{color:var(--g);font-size:.9rem;margin:8px 0 18px}
+.gate-c form{display:grid;gap:10px}
+.gate-c input{padding:12px 14px;border:2px solid var(--t);border-radius:12px;font-size:1rem;text-align:center;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+.gate-c input:focus{outline:none;border-color:var(--o)}
+.gate-c .err{color:var(--m);font-size:.8rem;font-weight:700;min-height:1.2em}
+.gate-c small{display:block;font-size:.76rem;color:var(--g);margin-top:12px}
+footer{border-top:1px solid var(--t);padding:22px 0 28px;font-size:.78rem;color:var(--g)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+@media (max-width:900px){.hello,.dv{grid-template-columns:1fr}.fm{position:static;max-height:none}.tiles,.rules{grid-template-columns:1fr 1fr}.dossiers{grid-template-columns:1fr}}
+@media (max-width:600px){.tiles,.rules{grid-template-columns:1fr}.mi{grid-template-columns:70px 1fr}.mi .act{grid-column:1/-1;text-align:left}.sheet{padding:22px}.sh-two,.sign{grid-template-columns:1fr}.who span{display:none}}
+@media print{
+  @page{size:A4;margin:12mm}
+  body *{visibility:hidden}
+  .sheet,.sheet *{visibility:visible}
+  .sheet{position:absolute;left:0;top:0;width:100%;border:0;box-shadow:none;padding:0;font-size:10.5pt}
+  .tot .big{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sh-top{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- Accès : clé animateur·rice -->
+<div class="gate" id="gate">
+  <div class="gate-c">
+    <img src="/img/fresque-marque.png" alt="">
+    <span class="k">Espace animateur·rice</span>
+    <h2>Bienvenue dans la communauté</h2>
+    <p>Saisis ta clé animateur·rice (reçue après ta formation) pour accéder aux ateliers, aux devis et à tes outils.</p>
+    <form id="gate-f">
+      <input id="gate-k" placeholder="AC-03BL" maxlength="8" autocomplete="off" aria-label="Clé animateur·rice">
+      <button class="btn btn-o" type="submit">Entrer</button>
+      <div class="err" id="gate-e"></div>
+    </form>
+    <small>Pas encore de clé ? Écris à <b>formation@institut-citoyen.org</b></small>
+  </div>
+</div>
+
+<nav class="nav" aria-label="Navigation"><div class="wrap">
+  <a class="logo" href="/"><img src="/img/fresque-marque.png" alt=""><span>Fresque de<br>l'Engagement Durable®<small>Espace animateur·rice</small></span></a>
+  <div class="who"><span>Connecté·e</span><b id="who-k">—</b><button id="logout" type="button">Changer de clé</button></div>
+</div></nav>
+
+<div class="tabs"><div class="wrap" role="tablist">
+  <a href="#accueil" data-v="accueil"><i class="rond" style="background:var(--o)"></i>Accueil</a>
+  <a href="#ateliers" data-v="ateliers"><i class="q-tl" style="background:var(--v)"></i>Ateliers à venir</a>
+  <a href="#devis" data-v="devis"><i class="q-br" style="background:var(--b)"></i>Faire un devis</a>
+  <a href="#outils" data-v="outils"><i class="q-tr" style="background:var(--m)"></i>Mes outils</a>
+</div></div>
+
+<main>
+<!-- ACCUEIL -->
+<section class="vue" id="v-accueil"><div class="wrap">
+  <div class="hello">
+    <div>
+      <span class="k">Ton espace</span>
+      <h1>Tout pour animer la Fresque de l'Engagement Durable®</h1>
+      <p class="lede">Positionne-toi sur les ateliers proposés par l'Institut, prépare un devis pour tes propres clients en deux minutes et retrouve tous les supports d'animation au même endroit.</p>
+    </div>
+    <div class="next">
+      <span class="k">Prochains rendez-vous</span>
+      <ul id="next-list"></ul>
+    </div>
+  </div>
+  <div class="tiles">
+    <a class="tile t1" href="#ateliers"><span class="n" id="n-libres">0</span><h3>Ateliers à pourvoir</h3><p>Les missions confiées par l'Institut, rémunérées selon la grille animateur·rice.</p><span class="go">Voir les ateliers →</span></a>
+    <a class="tile t2" href="#devis"><span class="n">2 min</span><h3>Faire un devis</h3><p>Un devis propre, aux couleurs de la Fresque, prêt à envoyer à ton client.</p><span class="go">Créer un devis →</span></a>
+    <a class="tile t3" href="#outils"><span class="n">6</span><h3>Dossiers d'outils</h3><p>Guide, supports, cartes, kit commercial, communication et ressources.</p><span class="go">Ouvrir mes outils →</span></a>
+  </div>
+  <div class="rules">
+    <div class="rule"><b>2h30</b>Un atelier dure toujours 2h30.</div>
+    <div class="rule"><b>15 max</b>Participants par animateur·rice (sauf classe entière).</div>
+    <div class="rule"><b>450 € HT</b>Prix minimum d'un atelier, quel que soit le public.</div>
+    <div class="rule"><b>10 %</b>Reversé à l'Institut sur tes propres ateliers.</div>
+  </div>
+</div></section>
+
+<!-- ATELIERS -->
+<section class="vue" id="v-ateliers"><div class="wrap">
+  <div class="head">
+    <div><span class="k">Missions de l'Institut</span><h2>Ateliers à venir</h2><p class="lede">L'Institut démarche et facture le client, tu animes. Rémunération : 150 € l'atelier 2h30, 200 € la classe entière, 100 € en co-animation.</p></div>
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="tous">Tous</button>
+      <button class="chip" data-f="libre">À pourvoir</button>
+      <button class="chip" data-f="bientot">Dates à venir</button>
+      <button class="chip" data-f="pourvu">Pourvus</button>
+    </div>
+  </div>
+  <div class="missions" id="missions"></div>
+  <p class="note"><b>Comment ça marche ?</b> Clique sur « Je suis disponible » : un mail part à la coordination avec l'atelier pré-rempli. Le brief complet (contact, adresse, public) t'est envoyé une fois la mission confirmée. Si le mail ne s'ouvre pas, écris à <b>anais@institut-citoyen.org</b>.</p>
+</div></section>
+
+<!-- DEVIS -->
+<section class="vue" id="v-devis"><div class="wrap">
+  <div class="head">
+    <div><span class="k">Tes propres clients</span><h2>Faire un devis</h2><p class="lede">Remplis le formulaire, le devis se met à jour à droite. Tes coordonnées restent enregistrées dans ton navigateur pour la prochaine fois.</p></div>
+    <a class="btn btn-l btn-s" href="https://drive.google.com/file/d/1b9a40Gtt7-T9JkpzwH6fMxESoL-Ojw8u/view" target="_blank" rel="noopener">Modèle Word du devis</a>
+  </div>
+  <div class="dv">
+    <form class="fm" id="fm" autocomplete="on">
+      <fieldset>
+        <legend>Toi</legend>
+        <label class="full">Prénom Nom ou raison sociale<input name="me_nom" placeholder="Camille Martin"></label>
+        <label>Statut<select name="me_statut"><option>Micro-entreprise</option><option>EI</option><option>SASU</option><option>EURL</option><option>Association</option><option>Portage salarial</option></select></label>
+        <label>SIRET<input name="me_siret" placeholder="123 456 789 00012"></label>
+        <label class="full">Adresse<input name="me_adr" placeholder="12 rue des Lilas, 69003 Lyon"></label>
+        <label>Email<input name="me_mail" type="email"></label>
+        <label>Téléphone<input name="me_tel"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Ton client</legend>
+        <label class="full">Organisation<input name="cl_org" placeholder="Collège Jean Moulin"></label>
+        <label>Contact<input name="cl_nom" placeholder="Prénom Nom"></label>
+        <label>Fonction<input name="cl_fct" placeholder="Professeure de SVT"></label>
+        <label class="full">Adresse<input name="cl_adr"></label>
+        <label class="full">Email<input name="cl_mail" type="email"></label>
+      </fieldset>
+      <fieldset>
+        <legend>L'atelier</legend>
+        <label class="full">Public<select name="public" id="public">
+          <option value="ent">Entreprise (1 200 à 1 500 €)</option>
+          <option value="sup">Enseignement supérieur (800 à 1 000 €)</option>
+          <option value="col">Collectivité (800 à 1 200 €)</option>
+          <option value="asso">Association / ESS (450 à 600 €)</option>
+          <option value="sco" selected>Établissement scolaire, classe entière (450 à 600 €)</option>
+        </select></label>
+        <label class="full">Format<select name="format" id="format">
+          <option value="atelier">Atelier 2h30</option>
+          <option value="journee">Journée (2 ateliers le même jour)</option>
+        </select></label>
+        <label>Nombre<input name="qte" type="number" min="1" value="1"></label>
+        <label>Prix unitaire HT<input name="pu" type="number" min="0" step="10" value="450"></label>
+        <div class="warn" id="warn">Le prix minimum est de 450 € HT par atelier (900 € la journée). Aucune remise ne peut passer sous ce seuil.</div>
+        <label>Participants<input name="pax" type="number" min="1" value="15"></label>
+        <label>Date<input name="date" type="date"></label>
+        <label class="full">Lieu<input name="lieu" placeholder="Dans vos locaux"></label>
+        <label>Déplacement HT<input name="depl" type="number" min="0" step="5" value="0"></label>
+        <label>TVA<select name="tva">
+          <option value="franchise">Franchise (art. 293 B)</option>
+          <option value="20">TVA 20 %</option>
+          <option value="asso">Association non assujettie</option>
+        </select></label>
+      </fieldset>
+      <fieldset>
+        <legend>Le devis</legend>
+        <label>N° de devis<input name="num"></label>
+        <label>Date du devis<input name="ddate" type="date"></label>
+        <label>Acompte<select name="acompte"><option value="30">30 %</option><option value="0">Sans acompte</option><option value="50">50 %</option></select></label>
+        <label>Validité<select name="valid"><option>30 jours</option><option>15 jours</option><option>60 jours</option></select></label>
+        <div class="hint" id="hint">Au-delà de 15 participants, prévois un·e animateur·rice de plus par groupe (sauf classe entière) : augmente le nombre d'ateliers.</div>
+      </fieldset>
+      <div class="btns">
+        <button class="btn btn-o" type="button" id="print">Imprimer / PDF</button>
+        <button class="btn btn-l" type="button" id="copy">Copier le récap</button>
+        <button class="btn btn-l" type="button" id="reset">Nouveau devis</button>
+      </div>
+    </form>
+
+    <div>
+      <div class="keep" id="keep"></div>
+      <article class="sheet" id="sheet">
+        <div class="sh-top">
+          <div class="me"><b data-o="me_nom">Prénom Nom</b><div data-o="me_statut"></div><div>SIRET : <span data-o="me_siret">—</span></div><div data-o="me_adr"></div><div><span data-o="me_mail"></span> <span data-o="me_tel"></span></div></div>
+          <div class="no"><b>DEVIS</b><div>N° <span data-o="num"></span></div><div>Date : <span data-o="ddate"></span></div><div>Validité : <span data-o="valid"></span></div></div>
+        </div>
+        <div class="sh-two">
+          <div><small>Objet</small><b>Animation de l'atelier Fresque de l'Engagement Durable®</b><div><span data-o="date">Date à définir</span> · <span data-o="lieu">Lieu à définir</span></div></div>
+          <div><small>Client</small><b data-o="cl_org">Organisation</b><div>À l'attention de <span data-o="cl_nom">—</span><span data-o="cl_fct_v"></span></div><div data-o="cl_adr"></div><div data-o="cl_mail"></div></div>
+        </div>
+        <table class="lines">
+          <thead><tr><th>Désignation</th><th class="r">Qté</th><th class="r">Prix unitaire HT</th><th class="r">Total HT</th></tr></thead>
+          <tbody id="lines"></tbody>
+        </table>
+        <div class="tot" id="tot"></div>
+        <div class="cond">
+          <b>Conditions</b>
+          <p id="c-regl"></p>
+          <p>Annulation par le client : sans frais à plus de 15 jours de l'atelier ; 50 % du montant entre 15 et 8 jours ; 100 % à moins de 8 jours.</p>
+          <p>Atelier animé par un·e animateur·rice certifié·e par l'Institut Citoyen. Fresque de l'Engagement Durable® est une marque déposée de l'Institut Citoyen.</p>
+        </div>
+        <div class="sign">
+          <div><small>L'animateur·rice</small><span data-o="me_nom"></span><br>Date :<br>Signature :</div>
+          <div><small>Bon pour accord · le client</small>Nom et fonction :<br>Date :<br>Signature et cachet :</div>
+        </div>
+        <div class="foot-sh" id="foot-sh"></div>
+      </article>
+    </div>
+  </div>
+</div></section>
+
+<!-- OUTILS -->
+<section class="vue" id="v-outils"><div class="wrap">
+  <div class="head">
+    <div><span class="k">Comme dans le Drive</span><h2>Mes outils</h2><p class="lede">Les mêmes dossiers que l'Espace Animateurs du Drive. Les fichiers s'ouvrent dans Google Drive avec ton compte (accès donné après la formation).</p></div>
+    <a class="btn btn-l btn-s" href="https://drive.google.com/drive/folders/1_xCSWeJy_spWXmqUtme7X7swjsVjeek-" target="_blank" rel="noopener">Ouvrir le Drive complet</a>
+  </div>
+  <div class="search"><input id="q" type="search" placeholder="Chercher un outil : déroulé, certificat, quiz…" aria-label="Chercher un outil"></div>
+  <div class="dossiers" id="dossiers"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Institut Citoyen · Espace réservé aux animateur·rices certifié·es</span><span><a href="/">Retour au site</a></span></div></footer>
+
+<script>
+(function(){
+  /* =========================================================
+     DONNÉES À METTRE À JOUR
+     ========================================================= */
+  var CONTACT = 'anais@institut-citoyen.org';
+
+  // Ateliers proposés par l'Institut. statut : libre | bientot | pourvu
+  // date au format AAAA-MM-JJ, ou '' si à définir
+  var ATELIERS = [
+    { titre:"Ville de Colombes — agents", type:"Collectivité", ville:"Colombes (92)", date:"2026-11-17", horaire:"14h – 17h30", format:"Atelier 2h30", public:"Agents de la ville", pax:15, anim:1, statut:"pourvu", info:"" },
+    { titre:"Lycée — 3 classes", type:"Établissement scolaire", ville:"Lieu communiqué au brief", date:"", periode:"Nov. 2026", horaire:"Dates en cours de calage", format:"Classe entière", public:"Lycéens", pax:"3 classes", anim:"1 par classe", statut:"libre", info:"Trois ateliers classe entière, à caler au plus vite." },
+    { titre:"Cité éducative de Gonesse", type:"Collectivité", ville:"Gonesse (95)", date:"", periode:"2026-27", horaire:"Calendrier sur l'année scolaire", format:"Ateliers + jeunes ambassadeurs", public:"Collégiens et lycéens", pax:"150 à 250 jeunes", anim:"Plusieurs", statut:"bientot", info:"Programme annuel : ateliers et formation de 20 jeunes ambassadeurs. Les dates arrivent." }
+  ];
+
+  // Prochains rendez-vous de la communauté (accueil)
+  var RDV = [
+    { date:"2026-11-18", titre:"Présentation de l'outil de traçabilité des ateliers", info:"Clé animateur·rice et formulaires Tally" },
+    { date:"2026-11-21", titre:"Session de formation à Paris", info:"Nouvelle promo d'animateur·rices" },
+    { date:"2026-12-05", titre:"Session de formation", info:"Nouvelle promo d'animateur·rices" }
+  ];
+
+  var D = 'https://drive.google.com/';
+  function f(id){ return D+'file/d/'+id+'/view'; }
+  function dir(id){ return D+'drive/folders/'+id; }
+  function gdoc(id){ return 'https://docs.google.com/document/d/'+id+'/edit'; }
+
+  var REGIONS = [
+    ["Auvergne-Rhône-Alpes","1kxwB_QVAviE9eADMZh0VDTu5xaH2vUeo"],["Bourgogne-Franche-Comté","1-fa9zmxV_du7W3ZmfGS-c71bRZViVyim"],
+    ["Bretagne","12Qsp-fzVkOWHGg7hb9E8A53qtIji5fKw"],["Centre-Val de Loire","1-3LGPFQO8uEYHbvVg4p2s8jsZ78_5kbx"],
+    ["Corse","1H7M1nkiVBISG9Qv5qyg03Fc8WRVNW2o1"],["Grand Est","1d4MJ17PXdYKjjb8E_RSbi2yFdQE13W_R"],
+    ["Hauts-de-France","1cFwfALcsZ2HNFPy05vifImA1mdyzjoww"],["Île-de-France","1DEo5EW1rx1Bq25mTRtnWS2FqWszuw3gO"],
+    ["Normandie","1JiBBcWz1gaj1BjYMSRIj8Vk4ISB8eC2T"],["Nouvelle-Aquitaine","1834uF9M9NGMyda2S-SghXmpLRt8z1Xrg"],
+    ["Occitanie","1g2nAENDTeeTSnovD1_VQCTo9F5ChQ146"],["Pays de la Loire","1B9WVjMsHsckUFiwH4U8nzHqnlqSgjlyR"],
+    ["Provence-Alpes-Côte d'Azur","1rYb3m1EeIXlFV7va2bLV5a_dOpGifxcW"]
+  ];
+
+  var DOSSIERS = [
+    { n:"01", t:"Slides de formation", d:"Pour revoir la formation à tout moment.", dir:"1fFxdvPX271yULYeFyfqIY5Zg6xgwAwBd", items:[
+      ["pdf","Slides de la formation à l'animation",f("10C1fAGZk2Ow5NAMbWdsmNfEad0XzUyZK")],
+      ["vid","Vidéo de présentation de la Fresque (sous-titrée)",f("1cm-zvGcWNrAd4qN06Q9i0qmUlfgvA2hz")]
+    ]},
+    { n:"02", t:"Guide d'animation", d:"Le déroulé et tout le matériel à imprimer pour l'atelier.", dir:"1qiY67_ZgkCWvaaceZuDxpmA_a83krGdl", items:[
+      ["pdf","Déroulé pédagogique",f("1cOopkCC4JEXUiwZZlTr6awz0tucMyTm8"),"Essentiel"],
+      ["sub","Outils d'animation"],
+      ["pdf","Support d'animation 2026",f("1QhgzcdYG7anhMrIpAUgmRz7AMgDwUFbL")],
+      ["pdf","Carte Solution",f("1pHm5Gju3oOYQTxS8Zntb0g7nn3CVhHOv")],
+      ["pdf","Certificat d'engagement",f("1pfYNiIV_ylamSqeXVvc-5FrYhDlVRjdw")],
+      ["pdf","Fiche Domino ODD (A4)",f("1YqiqyAkxZZK1a9QVvooiGPMZ7ftu-Iq7")],
+      ["doc","Quiz ODD",gdoc("1y7OUeuedPGLg0vsC-jiBO8AvFIHlL6ql6z32-vdcThE")]
+    ]},
+    { n:"03", t:"Ressources", d:"Pour approfondir et adapter l'atelier à ton territoire.", dir:"1tAYxKZpQ1E3WbF31YmPLCqByaxAbt-YW", items:[
+      ["pdf","Guide d'introduction à la Fresque de l'Engagement Durable®",f("1gMqCRxDMVJq8T1b3J85ovKpQzHQ7DI-A")],
+      ["pdf","Liste des cartes Défis 2026",f("1OCT_bIfUy1YXf_KiUPyBJ0PEAp8TnUqf")],
+      ["pdf","Bibliothèque de ressources",f("1qBt1HOD4RuFxzeOfVkXkDqYbJYe5kUNb")],
+      ["region"],
+      ["sub","Rendez-vous du mois"],
+      ["vid","#1 · 13/10 — enregistrement",f("13TRl9p_miJ7fjFHOAUl8R2ch4QAgw5s5")],
+      ["pdf","#1 · 13/10 — slides",f("1d1r40s5z_71nGP3DvIg9aBI5UsBDuitj")],
+      ["pdf","#2 · novembre — slides",f("1fT01PODTQIdlQO94Z_flwyUs1qVafHtr")],
+      ["sub","Focus sur la Fresque"],
+      ["vid","#1 · 28/10 — enregistrement",f("13Ft9kUphwDy5hLYlZ6NLmwRsCkGb9iAo")],
+      ["pdf","#1 · 28/10 — transcription",f("1qd6Qu1Jz0L_dJu3H5ohvgB9qLP5PPXH0")]
+    ]},
+    { n:"04", t:"Communication", d:"Pour parler de tes ateliers sur les réseaux.", dir:"18SvsPee6SQ5QmvEK-YEY_B9SKwIcSdse", items:[
+      ["pdf","Kit publication RS — nouveau site",f("1CfOAbsf3DGz8A0oLsUR3FYDGm_i8JBxm")],
+      ["doc","Descriptions LinkedIn animateur·rice",f("1_UhCW8qdKP-9q5AD1JZ9McNq_FIPYDnt")],
+      ["img","Visuel « Je suis animateur·rice certifié·e »",f("18Uy4tFSYa0GeTmqbDAUNIzsOs1fRaUrw")],
+      ["dir","Banque de photos d'ateliers",dir("1G6gz3lsaFC8nUvJUbdVutzYCSLsfpw6d")],
+      ["dir","Logos",dir("1B2LOdIhse03db6Q3YN-QL-UpoTxuIdz7")]
+    ]},
+    { n:"05", t:"Kit commercial", d:"Pour vendre la Fresque à tes propres clients.", dir:"1aSd7YgjEedeL8RW64fASzBF3T3ZHStFe", items:[
+      ["pdf","Guide commercial",f("1pPzUIGhvFxgdpas-EY2h5GGLrsBA_CFL"),"Commencer ici"],
+      ["pdf","Fiche catalogue",f("1fpVKX75xVetj8Nooq816UgZQ99APtIAM")],
+      ["pdf","Grille tarifaire indicative",f("1TK4h-w2-oFjEGce7YUhNeKTh5hmuWT8d")],
+      ["pdf","Mails types",f("1HfGpXYELjYyQRB_c8DgHayraQp867nAz")],
+      ["doc","Modèle de devis (Word)",f("1b9a40Gtt7-T9JkpzwH6fMxESoL-Ojw8u")],
+      ["pdf","Plaquette version animateur·rice",f("1fDcMT5vkImMbThfrfugKdagsx5lXc1HL")],
+      ["pdf","Flyer version animateur·rice",f("1HFe_XoSGbHYCp6ffUsHc0_AoAMin8kAk")],
+      ["doc","Liens Canva",gdoc("1WgXZRCAEy0GwxZZvAvv8RCG6wcszokQHGSB3mXC5Pl0")]
+    ]},
+    { n:"06", t:"Espace professeurs", d:"Pour prolonger l'atelier en classe.", dir:"1UgIBbwXgzorExa5O2AKTmDhHtrZ1MNbm", items:[
+      ["pdf","Quiz ODD collège — guide enseignant",f("1kFyIuyiq0r4LPOie59uBlOrJ2MDdVXFS")]
+    ]}
+  ];
+
+  /* ========================================================= */
+  var $=function(s,c){return (c||document).querySelector(s);}, $$=function(s,c){return [].slice.call((c||document).querySelectorAll(s));};
+  var store={get:function(k){try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;}},set:function(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+  var MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function dFR(iso){ if(!iso) return ''; var p=iso.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
+  function eur(n){ return (Math.round(n*100)/100).toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' €'; }
+  var today=new Date(); today.setHours(0,0,0,0);
+  function isoToday(){ var d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+
+  /* Accès */
+  var RE=/^AC-\d{2}[A-Z]{2,3}$/;
+  function enter(k){ $('#gate').classList.add('hide'); $('#who-k').textContent=k; }
+  var saved=store.get('ea_key'); if(saved && RE.test(saved)) enter(saved);
+  $('#gate-f').addEventListener('submit',function(e){ e.preventDefault(); var k=$('#gate-k').value.trim().toUpperCase();
+    if(!RE.test(k)){ $('#gate-e').textContent='Format attendu : AC- + 2 chiffres + tes initiales (ex. AC-03BL)'; return; }
+    store.set('ea_key',k); enter(k); });
+  $('#logout').addEventListener('click',function(){ store.set('ea_key',null); $('#gate').classList.remove('hide'); $('#gate-k').value=''; $('#gate-k').focus(); });
+
+  /* Onglets */
+  var VUES=['accueil','ateliers','devis','outils'];
+  function show(){ var h=location.hash.slice(1); if(VUES.indexOf(h)<0) h='accueil';
+    VUES.forEach(function(v){ $('#v-'+v).classList.toggle('on',v===h); });
+    $$('.tabs a').forEach(function(a){ a.classList.toggle('on',a.dataset.v===h); a.setAttribute('aria-selected',a.dataset.v===h); });
+    window.scrollTo(0,0); }
+  window.addEventListener('hashchange',show); show();
+
+  /* Accueil : rendez-vous */
+  var up=RDV.filter(function(r){ return new Date(r.date)>=today; }).slice(0,4);
+  $('#next-list').innerHTML = up.length ? up.map(function(r){ var d=new Date(r.date);
+    return '<li><span class="d">'+d.getDate()+'<small>'+MOIS[d.getMonth()]+'</small></span><span><b>'+esc(r.titre)+'</b><br>'+esc(r.info)+'</span></li>'; }).join('') : '<li>Pas de rendez-vous programmé pour l\'instant.</li>';
+
+  /* Ateliers */
+  var LBL={libre:'À pourvoir',bientot:'Dates à venir',pourvu:'Pourvu'};
+  var visibles=ATELIERS.filter(function(a){ return !a.date || new Date(a.date)>=today; });
+  $('#n-libres').textContent=visibles.filter(function(a){return a.statut==='libre';}).length;
+  function renderA(filt){
+    var list=visibles.filter(function(a){ return filt==='tous'||a.statut===filt; })
+      .sort(function(x,y){ return (x.date||'9999')<(y.date||'9999')?-1:1; });
+    if(!list.length){ $('#missions').innerHTML='<div class="empty">Aucun atelier dans cette catégorie pour le moment. Les nouvelles missions apparaissent ici dès qu\'elles sont signées.</div>'; return; }
+    $('#missions').innerHTML=list.map(function(a){
+      var d=a.date?new Date(a.date):null;
+      var cal=d?'<div class="cal"><b>'+d.getDate()+'</b><small>'+MOIS[d.getMonth()]+' '+d.getFullYear()+'</small></div>':'<div class="cal tbd">'+esc(a.periode||'À définir')+'</div>';
+      var sujet=encodeURIComponent('Dispo atelier : '+a.titre+(a.date?' ('+dFR(a.date)+')':''));
+      var corps=encodeURIComponent('Bonjour,\n\nJe suis disponible pour l\'atelier « '+a.titre+' »'+(a.date?' du '+dFR(a.date):'')+'.\n\nClé animateur·rice : '+(store.get('ea_key')||'')+'\n\nÀ bientôt !');
+      var act=a.statut==='pourvu'?'<span class="st pourvu">Pourvu</span>':
+        '<span class="st '+a.statut+'">'+LBL[a.statut]+'</span><br><a class="btn '+(a.statut==='libre'?'btn-o':'btn-b')+' btn-s" href="mailto:'+CONTACT+'?subject='+sujet+'&body='+corps+'">'+(a.statut==='libre'?'Je suis disponible':'Je suis intéressé·e')+'</a>';
+      return '<article class="mi">'+cal+'<div><h3>'+esc(a.titre)+'</h3><div class="meta"><span>'+esc(a.type)+'</span><span>'+esc(a.ville)+'</span><span>'+esc(a.horaire)+'</span><span>'+esc(a.format)+'</span><span>'+esc(a.public)+'</span><span>'+esc(a.pax)+' participants</span><span>'+esc(a.anim)+' anim.</span></div>'+(a.info?'<p>'+esc(a.info)+'</p>':'')+'</div><div class="act">'+act+'</div></article>';
+    }).join('');
+  }
+  $$('#filters .chip').forEach(function(c){ c.addEventListener('click',function(){ $$('#filters .chip').forEach(function(x){x.classList.remove('on');}); c.classList.add('on'); renderA(c.dataset.f); }); });
+  renderA('tous');
+
+  /* Devis */
+  var PRIX={ent:[1200,1500],sup:[800,1000],col:[800,1200],asso:[450,600],sco:[450,600]};
+  var fm=$('#fm'), ME=['me_nom','me_statut','me_siret','me_adr','me_mail','me_tel'];
+  var me=store.get('ea_me')||{}; ME.forEach(function(k){ if(me[k]) fm[k].value=me[k]; });
+  function nextNum(){ var n=(store.get('ea_num')||0)+1; return new Date().getFullYear()+'-'+String(n).padStart(3,'0'); }
+  fm.num.value=nextNum(); fm.ddate.value=isoToday();
+  function suggest(){ var r=PRIX[fm.public.value], j=fm.format.value==='journee'?2:1; fm.pu.value=r[0]*j; }
+  fm.public.addEventListener('change',function(){ suggest(); render(); });
+  fm.format.addEventListener('change',function(){ suggest(); render(); });
+
+  function render(){
+    var v={}; $$('input,select',fm).forEach(function(i){ v[i.name]=i.value.trim(); });
+    var me2={}; ME.forEach(function(k){ me2[k]=v[k]; }); store.set('ea_me',me2);
+    var out={me_nom:v.me_nom||'Prénom Nom',me_statut:v.me_statut,me_siret:v.me_siret||'—',me_adr:v.me_adr,me_mail:v.me_mail,me_tel:v.me_tel?'· '+v.me_tel:'',
+      num:v.num,ddate:dFR(v.ddate),valid:v.valid,date:v.date?'Le '+dFR(v.date):'Date à définir',lieu:v.lieu||'Lieu à définir',
+      cl_org:v.cl_org||'Organisation',cl_nom:v.cl_nom||'—',cl_fct_v:v.cl_fct?', '+v.cl_fct:'',cl_adr:v.cl_adr,cl_mail:v.cl_mail};
+    $$('[data-o]').forEach(function(el){ el.textContent=out[el.dataset.o]||''; });
+    $('#foot-sh').textContent=[v.me_nom||'Prénom Nom', v.me_siret?'SIRET '+v.me_siret:'', v.me_adr, v.me_mail].filter(Boolean).join(' · ');
+    var j=v.format==='journee', q=Math.max(1,parseInt(v.qte)||1), pu=parseFloat(v.pu)||0, dep=parseFloat(v.depl)||0, pax=parseInt(v.pax)||0, sco=v.public==='sco';
+    var min=j?900:450; $('#warn').style.display=pu<min?'block':'none';
+    var lib=j?'Journée Fresque de l\'Engagement Durable®':'Atelier Fresque de l\'Engagement Durable®';
+    var det=j?'Deux ateliers-jeux de 2h30 le même jour':(sco?'Atelier-jeu de 2h30, format classe entière':'Atelier-jeu de 2h30, jusqu\'à 15 participants par animateur·rice');
+    det+=(pax?', '+pax+' participants':'')+(v.date?', le '+dFR(v.date):'')+(v.lieu?', '+v.lieu:'');
+    var rows='<tr><td><b>'+lib+'</b><small>'+esc(det)+'</small></td><td class="r">'+q+'</td><td class="r">'+eur(pu)+'</td><td class="r">'+eur(q*pu)+'</td></tr>'+
+      '<tr><td><b>Inclus</b><small>Préparation et adaptation au public, matériel pédagogique (jeu de 42 cartes, canevas Carte Solution), certificats de participation, bilan de satisfaction</small></td><td class="r">—</td><td class="r">Inclus</td><td class="r">—</td></tr>';
+    if(dep>0) rows+='<tr><td><b>Frais de déplacement</b></td><td class="r">1</td><td class="r">'+eur(dep)+'</td><td class="r">'+eur(dep)+'</td></tr>';
+    $('#lines').innerHTML=rows;
+    var ht=q*pu+dep, tva=v.tva==='20'?ht*.2:0, ttc=ht+tva;
+    var mention=v.tva==='franchise'?'TVA non applicable, art. 293 B du CGI':(v.tva==='asso'?'Association non assujettie à la TVA':'');
+    $('#tot').innerHTML='<div><span>Total HT</span><b>'+eur(ht)+'</b></div>'+(v.tva==='20'?'<div><span>TVA 20 %</span><span>'+eur(tva)+'</span></div>':'')+
+      '<div class="big"><span>'+(v.tva==='20'?'Total TTC':'Net à payer')+'</span><span>'+eur(ttc)+'</span></div>'+(mention?'<div class="mention">'+mention+'</div>':'');
+    var ac=parseInt(v.acompte)||0;
+    $('#c-regl').textContent='Règlement : '+(ac?'acompte de '+ac+' % à la signature ('+eur(ttc*ac/100)+'), solde à réception de la facture, sous 30 jours.':'à réception de la facture, sous 30 jours.');
+    // ce que tu gardes
+    var nbAt=q*(j?2:1), base=q*pu, rev=Math.min(base*.1, 150*nbAt);
+    var warnPax=(!sco && pax>15*nbAt)?' · <b style="color:var(--m)">'+pax+' participants = '+Math.ceil(pax/15)+' ateliers / animateur·rices nécessaires</b>':'';
+    $('#keep').innerHTML='<span>Ateliers HT<br><b>'+eur(base)+'</b></span><span>Reversement Institut (10 %)<br><b>'+eur(rev)+'</b></span><span>Tu gardes (hors déplacement)<br><b>'+eur(base-rev)+'</b></span>'+(warnPax?'<span style="flex-basis:100%">'+warnPax.slice(3)+'</span>':'');
+    window._recap=out.cl_org+' — '+lib+' × '+q+' — '+eur(ht)+' HT'+(v.date?' — '+dFR(v.date):'');
+  }
+  fm.addEventListener('input',render);
+  $('#print').addEventListener('click',function(){ var n=(store.get('ea_num')||0)+1; store.set('ea_num',n); try{ window.print(); }catch(e){} });
+  $('#copy').addEventListener('click',function(){ var b=this; try{ navigator.clipboard.writeText(window._recap).then(function(){ b.textContent='Copié !'; setTimeout(function(){b.textContent='Copier le récap';},1500); }); }catch(e){} });
+  $('#reset').addEventListener('click',function(){ ['cl_org','cl_nom','cl_fct','cl_adr','cl_mail','date','lieu'].forEach(function(k){ fm[k].value=''; }); fm.qte.value=1; fm.depl.value=0; fm.pax.value=15; fm.num.value=nextNum(); fm.ddate.value=isoToday(); suggest(); render(); });
+  render();
+
+  /* Outils */
+  var TY={pdf:'PDF',doc:'DOC',vid:'VIDÉO',dir:'DOS.',img:'IMG'};
+  $('#dossiers').innerHTML=DOSSIERS.map(function(d){
+    return '<div class="dos"><div class="dos-h"><div><span class="num">Dossier '+d.n+'</span><h3>'+esc(d.t)+'</h3><p>'+esc(d.d)+'</p></div><a href="'+dir(d.dir)+'" target="_blank" rel="noopener">Ouvrir le dossier</a></div><ul class="files">'+
+      d.items.map(function(it){
+        if(it[0]==='sub') return '<li class="sub">'+esc(it[1])+'</li>';
+        if(it[0]==='region') return '<li class="region-li"><div class="region"><span class="ty" style="background:var(--b);color:#fff;font-size:.6rem;font-weight:900;padding:4px 6px;border-radius:6px">ODD</span><select id="reg" aria-label="ODD près de chez nous">'+
+          REGIONS.map(function(r){ return '<option value="'+r[1]+'"'+(r[0]==='Île-de-France'?' selected':'')+'>Les ODD près de chez nous — '+esc(r[0])+'</option>'; }).join('')+'</select><a class="btn btn-b btn-s" id="reg-go" href="'+f(REGIONS[7][1])+'" target="_blank" rel="noopener">Ouvrir</a></div></li>';
+        return '<li data-s="'+esc((it[1]+' '+d.t).toLowerCase())+'"><a href="'+it[2]+'" target="_blank" rel="noopener"><span class="ty '+it[0]+'">'+TY[it[0]]+'</span>'+esc(it[1])+(it[3]?'<em>'+esc(it[3])+'</em>':'')+'</a></li>';
+      }).join('')+'</ul></div>';
+  }).join('');
+  $('#reg').addEventListener('change',function(){ $('#reg-go').href=f(this.value); });
+  $('#q').addEventListener('input',function(){ var q=this.value.toLowerCase().trim();
+    $$('.dos').forEach(function(d){ var any=false;
+      $$('li[data-s]',d).forEach(function(li){ var ok=!q||li.dataset.s.indexOf(q)>-1; li.classList.toggle('hide',!ok); if(ok) any=true; });
+      $$('li.sub,li.region-li',d).forEach(function(li){ li.classList.toggle('hide',!!q && !(li.classList.contains('region-li') && ('odd région régions territoire'.indexOf(q)>-1))); });
+      d.classList.toggle('hide',!any && !!q); });
+  });
+})();
+</script>
+</body>
+</html>
