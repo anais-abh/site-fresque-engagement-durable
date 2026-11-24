@@ -423,101 +423,150 @@ footer .leg a{color:inherit;opacity:.85}
 @media (max-width:860px){.legal{grid-template-columns:1fr}.legal aside{display:none}.ltab{display:block;overflow-x:auto}}
 .contact{padding:56px 0;background:#fff;border-top:1px solid var(--t)}.contact h2{margin-bottom:6px}.contact .ct-i{color:var(--g);margin-bottom:24px}.ct-g{display:grid;grid-template-columns:1fr 1fr;gap:18px}.ct-c{border-radius:18px;padding:22px 24px;border:2px solid}.ct-c.f{background:var(--ov);border-color:var(--op)}.ct-c.a{background:var(--bp);border-color:var(--c)}.ct-c .ct-t{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:999px;color:#fff;margin-bottom:10px}.ct-c.f .ct-t{background:var(--o)}.ct-c.a .ct-t{background:var(--b)}.ct-c h3{font-size:1.1rem;font-weight:800;margin-bottom:2px}.ct-c .ct-p{color:var(--g);font-size:.86rem;margin-bottom:14px}.ct-c ul{list-style:none;display:grid;gap:8px;padding:0;margin:0}.ct-c li a{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--e);text-decoration:none;word-break:break-all}.ct-c li a:hover{text-decoration:underline}.ct-c li i{flex:none;width:32px;height:32px;border-radius:50%;background:#fff;display:inline-flex;align-items:center;justify-content:center;font-style:normal}.ct-c.f li i{color:var(--of)}.ct-c.a li i{color:var(--b)}@media (max-width:700px){.ct-g{grid-template-columns:1fr}.contact{padding:40px 0}}</style>
 <style>
-.lp-hero{padding:34px 0 40px}
-.lp-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:36px;align-items:start!important}
-.lp-txt h1{font-size:clamp(1.9rem,3.8vw,2.9rem)}
-.lp-steps{list-style:none;display:grid;gap:10px;margin:22px 0}
-.lp-steps li{display:flex;gap:12px;align-items:center;font-size:.95rem}
-.lp-steps li b{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--o);color:#fff;font-weight:900}
-.lp-steps li:nth-child(2) b{background:var(--b)}.lp-steps li:nth-child(3) b{background:var(--vf)}
-.lp-proof{display:flex;gap:12px;align-items:center;font-size:.86rem;color:var(--g)}
-.lp-faces{display:flex;flex:none}.lp-faces img{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-10px}.lp-faces img:first-child{margin-left:0}
-.lp-proof b{color:var(--e)}
-.lp-card{background:var(--o);color:#fff;border-radius:26px;padding:22px 22px 10px;box-shadow:0 18px 44px rgba(240,100,50,.25);scroll-margin-top:84px}
-.lp-card a{color:#fff;text-decoration:underline}
-.lp-card .btn{text-decoration:none}
-.lp-card-t{font-weight:900;font-size:1.25rem;line-height:1.2;margin-bottom:10px}
-.lp-prog{display:flex;gap:6px;margin-bottom:12px}
-.lp-prog span{flex:1;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.2);color:#fff;text-align:center}
-.lp-prog span.on{background:#fff;color:var(--of)}.lp-prog span.ok{background:rgba(255,255,255,.35);color:#fff}
-.lp-sub{font-size:.95rem;color:#fff;opacity:.95;margin-bottom:12px}
-.lp-cal{min-width:280px;height:700px;background:#fff;border-radius:16px;overflow:hidden}
-.lp-small{font-size:.78rem;color:#fff;padding:8px 0 12px}.lp-small a{font-weight:700}
-.lp-dates{margin-top:18px;font-size:.95rem}
-.lp-faq .acc{max-width:760px}
+/* Landing candidature : aérée, réassurance, formulaire au centre */
+.nav .wrap{justify-content:space-between}
+.lp-tel{font-weight:800;font-size:.9rem;color:var(--e)}.lp-tel span{font-weight:600;color:var(--g);margin-right:4px}
+.lp-hero{padding:56px 0 72px;background:linear-gradient(180deg,var(--ov) 0%,#fff 100%)}
+.lp-grid{display:grid;grid-template-columns:1fr minmax(0,500px);gap:64px;align-items:start}
+.lp-txt{padding-top:12px}
+.lp-txt h1{font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.08;margin-top:6px;text-wrap:balance}
+.lp-lede{font-size:1.12rem;color:var(--g);margin-top:20px;max-width:46ch;line-height:1.6}
+.lp-check{list-style:none;display:grid;gap:16px;margin:34px 0 36px}
+.lp-check li{display:flex;gap:14px;align-items:flex-start;font-size:1rem;line-height:1.5}
+.lp-check i{flex:none;width:28px;height:28px;border-radius:50%;background:var(--vp);color:var(--vf);display:grid;place-items:center;font-style:normal;font-weight:900;font-size:.9rem;margin-top:1px}
+.lp-team{display:flex;gap:16px;align-items:center;padding:18px 20px;background:#fff;border:1px solid var(--t);border-radius:18px;max-width:480px}
+.lp-team p{font-size:.92rem;color:var(--g);line-height:1.5}.lp-team b{color:var(--e)}
+.lp-faces{display:flex;flex:none}.lp-faces img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:3px solid #fff;margin-left:-12px}.lp-faces img:first-child{margin-left:0}
+.lp-card{background:#fff;border-radius:28px;box-shadow:0 24px 60px rgba(201,74,28,.14),0 2px 6px rgba(0,0,0,.04);overflow:hidden;scroll-margin-top:90px}
+.lp-card-h{background:var(--o);color:#fff;padding:26px 30px 22px}
+.lp-card-t{font-weight:900;font-size:1.35rem;line-height:1.2}
+.lp-steps2{display:flex;gap:10px;margin-top:16px}
+.lp-steps2 span{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;opacity:.7}
+.lp-steps2 span b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.25);font-size:.76rem}
+.lp-steps2 span.on{opacity:1}.lp-steps2 span.on b{background:#fff;color:var(--of)}
+.lp-steps2 span.ok{opacity:1}.lp-steps2 span.ok b{background:rgba(255,255,255,.4);color:#fff}
+.lp-steps2 span+span::before{content:"";width:22px;height:2px;background:rgba(255,255,255,.4);margin-right:4px}
+.lp-card-b{padding:26px 30px 8px}
+.lp-t2{font-weight:900;font-size:1.2rem;margin-bottom:8px}
+.lp-sub{font-size:.98rem;color:var(--g);margin-bottom:16px;line-height:1.55}.lp-sub a{color:var(--of);font-weight:700}
+.lp-cal{min-width:280px;height:680px;border-radius:16px;overflow:hidden;border:1px solid var(--t)}
+.lp-small{font-size:.8rem;color:var(--g);padding:12px 0 16px}.lp-small a{color:var(--of);font-weight:700}
+.lp-safe{font-size:.8rem;color:var(--g);text-align:center;padding:4px 20px 22px}
+.lp-stats{padding:34px 0;border-top:1px solid var(--t);border-bottom:1px solid var(--t)}
+.lp-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.lp-stats div{display:flex;flex-direction:column;gap:2px}.lp-stats b{font-size:1.9rem;font-weight:900;color:var(--o);line-height:1.1}.lp-stats span{font-size:.9rem;color:var(--g);font-weight:600}
+.lp-s{padding:88px 0}
+.lp-head{max-width:640px;margin-bottom:40px}.lp-head h2{text-wrap:balance}
+.temo-row{gap:22px}.tm{padding:24px;gap:14px}
+.lp-path{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.lp-path div{background:#fff;border-radius:22px;padding:26px 24px}
+.lp-path b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--o);color:#fff;font-weight:900;margin-bottom:16px}
+.lp-path div:nth-child(2) b{background:var(--b)}.lp-path div:nth-child(3) b{background:var(--vf)}.lp-path div:nth-child(4) b{background:var(--m)}
+.lp-path h3{font-size:1.05rem;margin-bottom:8px}.lp-path p{font-size:.93rem;color:var(--g);line-height:1.55}
+.lp-two{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
+.lp-list{list-style:none;display:grid;gap:14px}
+.lp-list li{display:flex;gap:14px;align-items:center;font-size:1.02rem}
+.lp-list li::before{content:"✓";flex:none;width:28px;height:28px;border-radius:50%;background:var(--ov);color:var(--of);display:grid;place-items:center;font-weight:900;font-size:.9rem}
+.lp-dates{background:var(--ov);border-radius:26px;padding:32px}
+.lp-dates-t{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--of);margin-bottom:14px}
+.lp-date{display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.lp-date b{font-size:1.1rem;font-weight:900}.lp-date span{font-size:.86rem;color:var(--g);font-weight:600}
+.lp-big{padding:15px 28px;font-size:.98rem;margin-top:14px}
+.lp-dates .lp-big{width:100%}
+.lp-faq .acc{max-width:780px}.lp-faq .acc button{padding:20px 40px 20px 0;font-size:1.02rem}.lp-faq .acc .pn{font-size:.97rem;line-height:1.6;padding-bottom:20px}
+.lp-final{background:var(--o);color:#fff;padding:80px 0;text-align:center}
+.lp-final h2{max-width:720px;margin:0 auto 10px;text-wrap:balance}
 .lp-sticky{display:none}
 @media (max-width:960px){
- .lp-grid{grid-template-columns:1fr!important}
- .lp-sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:70;justify-content:center;transition:opacity .2s}
- .lp-sticky .btn{width:100%;padding:13px;font-size:.92rem;box-shadow:0 8px 24px rgba(0,0,0,.18)}
- .lp-sticky.off{opacity:0;pointer-events:none}
- .lp-card{padding:16px 14px 6px}
- .lp-hero{padding:22px 0 30px}
- .lp-txt .lede{display:none}
- .lp-steps{margin:16px 0 14px;gap:8px}
- .lp-steps li{font-size:.88rem}
- .lp-proof{font-size:.8rem}
- .lp-grid{gap:20px}
+ .lp-grid,.lp-two{grid-template-columns:1fr;gap:36px}
+ .lp-hero{padding:30px 0 48px}
+ .lp-txt{padding-top:0}
+ .lp-lede{display:none}
+ .lp-check{margin:22px 0 0;gap:12px}.lp-check li{font-size:.93rem}
+ .lp-team{display:none}
+ .lp-path{grid-template-columns:1fr 1fr}
+ .lp-stats .wrap{grid-template-columns:1fr 1fr}
+ .lp-s{padding:60px 0}
+}
+@media (max-width:600px){
+ .lp-tel span{display:none}
+ .lp-card{border-radius:22px}.lp-card-h{padding:20px 20px 18px}.lp-card-b{padding:20px 18px 4px}
+ .lp-path{grid-template-columns:1fr}
  .lp-cal{height:1000px}
+ .lp-sticky{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:70;transition:opacity .2s}
+ .lp-sticky .btn{width:100%;padding:15px;font-size:.95rem;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+ .lp-sticky.off{opacity:0;pointer-events:none}
 }
 </style>
 </head>
 <body>
 
 <nav class="nav" aria-label="Navigation"><div class="wrap">
-  <a class="logo" href="https://fresque-engagement-durable.org/"><img decoding="async" width="256" height="256" src="/img/fresque-marque.png" alt="">Fresque de<br>l'Engagement Durable®</a>
-  <div class="nav-p" style="margin-left:auto"><a class="btn cta-a" href="#candidature">Rejoindre la promo</a></div>
+  <a class="logo" href="/"><img decoding="async" width="256" height="256" src="/img/fresque-marque.png" alt="">Fresque de<br>l'Engagement Durable®</a>
+  <a class="lp-tel" href="tel:+33769812146"><span>Une question ?</span> 07 69 81 21 46</a>
 </div></nav>
 
 <main>
-<header class="hero lp-hero"><div class="wrap lp-grid">
+<header class="lp-hero"><div class="wrap lp-grid">
   <div class="lp-txt">
     <span class="k">Formation Animateur Citoyen®</span>
-    <h1>Devenez animateur·rice de la Fresque <span class="c-o">de l'Engagement Durable®.</span></h1>
-    <p class="lede">Une journée de formation, un jeu de 42 cartes livré chez vous et une communauté qui vous accompagne pour animer le grand jeu du développement durable, à votre compte ou dans votre structure.</p>
-    <ol class="lp-steps">
-      <li><b>1</b><span><strong>Vous répondez à 5 questions</strong> sur votre projet (2 minutes)</span></li>
-      <li><b>2</b><span><strong>Vous choisissez votre créneau</strong> juste après, sur cette page</span></li>
-      <li><b>3</b><span><strong>On échange 30 minutes</strong> en visio pour voir si le parcours vous correspond</span></li>
-    </ol>
-    <div class="lp-proof">
-      <div class="lp-faces"><img src="/img/nelly-marot.webp" alt=""><img src="/img/bruno-lametrie.webp" alt=""><img src="/img/celine-amiet.webp" alt=""><img src="/img/magali-bailly.webp" alt=""></div>
-      <p><b>+50 animateur·rices</b> formé·es, de Lille à Mayotte · <b>93 %</b> de satisfaction</p>
+    <h1>Devenez animateur·rice de la Fresque de l'Engagement Durable®</h1>
+    <p class="lp-lede">Animez le grand jeu du développement durable, à votre compte ou dans votre structure. On vous forme en une journée, et on reste à vos côtés ensuite.</p>
+
+    <ul class="lp-check">
+      <li><i>✓</i><span><b>Un échange de 30 minutes</b>, gratuit et sans engagement, pour parler de votre projet</span></li>
+      <li><i>✓</i><span><b>Aucune expertise requise</b> : beaucoup de nos animateur·rices n'avaient jamais animé</span></li>
+      <li><i>✓</i><span><b>Paiement en plusieurs fois</b> sans frais</span></li>
+    </ul>
+
+    <div class="lp-team">
+      <div class="lp-faces"><img src="/img/equipe-clement.webp" alt=""><img src="/img/equipe-anais.webp" alt=""></div>
+      <p>Vous échangerez avec <b>notre équipe formation</b>, qui accompagne chaque animateur·rice de A à Z.</p>
     </div>
   </div>
 
   <div class="lp-card" id="candidature">
-    <div id="etape-form">
+    <div class="lp-card-h">
       <p class="lp-card-t">Rejoindre la prochaine promo</p>
-      <div class="lp-prog"><span class="on">1. Votre projet</span><span>2. Votre créneau</span></div>
-      <iframe id="tally" data-tally-src="https://tally.so/embed/gb9XqN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="eager" width="100%" height="820" frameborder="0" marginheight="0" marginwidth="0" title="Rejoindre la prochaine promo d'animateur·rices"></iframe>
+      <div class="lp-steps2"><span class="on" id="s1"><b>1</b>Votre projet</span><span id="s2"><b>2</b>Votre créneau</span></div>
     </div>
+    <div class="lp-card-b">
+      <div id="etape-form">
+        <iframe id="tally" data-tally-src="https://tally.so/embed/gb9XqN?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="eager" width="100%" height="560" frameborder="0" marginheight="0" marginwidth="0" title="Rejoindre la prochaine promo d'animateur·rices"></iframe>
+      </div>
 
-    <div id="etape-rdv" hidden>
-      <p class="lp-card-t" id="rdv-titre">Merci, votre demande est bien reçue !</p>
-      <div class="lp-prog"><span class="ok">1. Votre projet ✓</span><span class="on">2. Votre créneau</span></div>
-      <p class="lp-sub">Dernière étape : choisissez le moment qui vous arrange pour échanger 30 minutes avec nous.</p>
-      <div id="calendly" class="lp-cal"></div>
-      <p class="lp-small">Le calendrier ne s'affiche pas ? <a href="https://calendly.com/clement-institut-citoyen/30min" target="_blank" rel="noopener">Ouvrez-le ici</a>.</p>
-    </div>
+      <div id="etape-rdv" hidden>
+        <p class="lp-t2" id="rdv-titre">Merci, votre demande est bien reçue !</p>
+        <p class="lp-sub">Dernière étape : choisissez le moment qui vous arrange pour échanger 30 minutes avec nous.</p>
+        <div id="calendly" class="lp-cal"></div>
+        <p class="lp-small">Le calendrier ne s'affiche pas ? <a href="https://calendly.com/clement-institut-citoyen/30min" target="_blank" rel="noopener">Ouvrez-le ici</a>.</p>
+      </div>
 
-    <div id="etape-ok" hidden>
-      <p class="lp-card-t">C'est réservé, à très vite !</p>
-      <div class="lp-prog"><span class="ok">1. Votre projet ✓</span><span class="ok">2. Votre créneau ✓</span></div>
-      <p class="lp-sub">Vous allez recevoir la confirmation par e-mail, puis un SMS de rappel la veille de notre échange.</p>
-      <p class="lp-sub">En attendant, découvrez <a style="font-weight:800" href="https://fresque-engagement-durable.org/l-atelier/">l'atelier que vous animerez →</a></p>
-    </div>
+      <div id="etape-ok" hidden>
+        <p class="lp-t2">C'est réservé, à très vite !</p>
+        <p class="lp-sub">Vous recevez la confirmation par e-mail, puis un SMS de rappel la veille de notre échange.</p>
+        <p class="lp-sub">En attendant, découvrez <a href="/l-atelier/">l'atelier que vous animerez</a>.</p>
+      </div>
 
-    <div id="etape-gratuit" hidden>
-      <p class="lp-card-t">Merci pour votre intérêt !</p>
-      <p class="lp-sub">Le parcours pour devenir animateur·rice est payant : il comprend la formation, le jeu de cartes, la licence et l'accompagnement toute l'année. Si votre structure peut le financer, ou si votre situation évolue, nous serons ravi·es d'en parler avec vous.</p>
-      <div class="btns"><a class="btn btn-w" href="https://calendly.com/clement-institut-citoyen/30min" target="_blank" rel="noopener">Échanger quand même avec nous</a><a class="btn btn-wl" href="https://fresque-engagement-durable.org/organiser-un-atelier/">Participer à un atelier</a></div>
+      <div id="etape-gratuit" hidden>
+        <p class="lp-t2">Merci pour votre intérêt !</p>
+        <p class="lp-sub">Le parcours pour devenir animateur·rice est payant : il comprend la formation, le jeu de cartes, la licence et l'accompagnement toute l'année. Si votre structure peut le financer, ou si votre situation évolue, nous serons ravi·es d'en parler avec vous.</p>
+        <div class="btns"><a class="btn cta-a" href="https://calendly.com/clement-institut-citoyen/30min" target="_blank" rel="noopener">Échanger quand même avec nous</a><a class="btn cta-a-l" href="/organiser-un-atelier/">Participer à un atelier</a></div>
+      </div>
     </div>
+    <p class="lp-safe">2 minutes · Vos réponses restent confidentielles</p>
   </div>
 </div></header>
 
-<section id="temoignages" style="padding-top:28px"><div class="wrap">
-  <div class="head"><span class="k">La communauté</span><h2>Ils et elles ont sauté le pas</h2></div>
+<section class="lp-stats"><div class="wrap">
+  <div><b>+50</b><span>animateur·rices formé·es</span></div>
+  <div><b>12</b><span>régions, de Lille à Mayotte</span></div>
+  <div><b>+3 000</b><span>participant·es aux ateliers</span></div>
+  <div><b>93 %</b><span>de satisfaction</span></div>
+</div></section>
+
+<section class="lp-s"><div class="wrap">
+  <div class="lp-head"><span class="k">Ils et elles ont sauté le pas</span><h2>Des parcours très différents, une même envie de transmettre</h2></div>
   <div class="temo-row">
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/bruno-lametrie.webp" alt="Portrait de Bruno Lamétrie"><div><b>Bruno Lamétrie</b><span>26 ans dans l'eau, puis le Cnam à 50 ans</span></div></div><q>Pas besoin d'être un professionnel du développement durable, ni de la formation.</q><p class="apport"><b>Cela m'a apporté :</b> la légitimité de faire passer des messages de manière ludique.</p></article>
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/nelly-marot.webp" alt="Portrait de Nelly Marot"><div><b>Nelly Marot</b><span>Prévention santé · Mayotte</span></div></div><q>Osez ! Pas besoin d'avoir toutes les réponses pour susciter une prise de conscience.</q><p class="apport"><b>Cela m'a apporté :</b> une sensibilisation moins donneuse de leçons, plus participative.</p></article>
@@ -525,37 +574,60 @@ footer .leg a{color:inherit;opacity:.85}
   </div>
 </div></section>
 
-<section class="bg-v"><div class="wrap">
-  <div class="head"><span class="k">Le parcours</span><h2>Ce que comprend le parcours</h2><p class="lede">7 heures avec votre promo de 6 à 8 personnes, en distanciel ou en présentiel à Paris. Paiement possible en plusieurs fois sans frais.</p></div>
-  <div class="kit">
-    <div><b>1</b>Une journée de formation à l'animation</div>
-    <div><b>2</b>Le jeu de 42 cartes, livré chez vous</div>
-    <div><b>3</b>Votre licence d'animation, incluse la 1re année</div>
-    <div><b>4</b>Le guide d'introduction et le déroulé pédagogique</div>
-    <div><b>5</b>Les Rendez-vous du mois et le groupe de votre promo</div>
-    <div><b>6</b>Des missions rémunérées proposées par l'Institut Citoyen</div>
+<section class="lp-s bg-v"><div class="wrap">
+  <div class="lp-head"><span class="k">Comment ça se passe</span><h2>De votre candidature à votre premier atelier</h2></div>
+  <div class="lp-path">
+    <div><b>1</b><h3>On échange 30 minutes</h3><p>Votre projet, vos questions, la formule qui vous correspond. Sans engagement.</p></div>
+    <div><b>2</b><h3>Vous choisissez votre date</h3><p>Une promo de 6 à 8 personnes, le samedi, en ligne ou à Paris.</p></div>
+    <div><b>3</b><h3>Vous vous formez</h3><p>7 heures de mises en situation. Vous recevez votre jeu chez vous.</p></div>
+    <div><b>4</b><h3>Vous animez, accompagné·e</h3><p>Rendez-vous du mois, groupe de promo et missions proposées par l'Institut Citoyen.</p></div>
   </div>
-  <p class="lp-dates"><b>Prochaines promos :</b> samedi 5 décembre, samedi 19 décembre, samedi 9 janvier 2027</p>
-  <div class="btns"><a class="btn cta-a" href="#candidature">Je rejoins la prochaine promo</a></div>
 </div></section>
 
-<section><div class="wrap lp-faq">
-  <div class="head"><span class="k">Vos questions</span><h2>Avant de vous lancer</h2></div>
+<section class="lp-s"><div class="wrap lp-two">
+  <div>
+    <div class="lp-head"><span class="k">Le parcours</span><h2>Tout ce qu'il faut pour vous lancer</h2></div>
+    <ul class="lp-list">
+      <li>Une journée de formation à l'animation</li>
+      <li>Le jeu de 42 cartes, livré chez vous</li>
+      <li>Votre licence d'animation, incluse la 1re année</li>
+      <li>Le guide d'introduction et le déroulé pédagogique</li>
+      <li>Les Rendez-vous du mois et le groupe de votre promo</li>
+      <li>Des missions rémunérées proposées par l'Institut Citoyen</li>
+    </ul>
+  </div>
+  <div class="lp-dates">
+    <p class="lp-dates-t">Prochaines promos</p>
+    <div class="lp-date"><b>Sam. 5 déc.</b><span>En ligne</span></div>
+    <div class="lp-date"><b>Sam. 19 déc.</b><span>En ligne</span></div>
+    <div class="lp-date"><b>Sam. 9 janv.</b><span>2027</span></div>
+    <a class="btn cta-a lp-big" href="#candidature">Je rejoins la prochaine promo</a>
+  </div>
+</div></section>
+
+<section class="lp-s bg-v"><div class="wrap lp-faq">
+  <div class="lp-head"><span class="k">Vos questions</span><h2>Avant de vous lancer</h2></div>
   <div class="acc">
     <button aria-expanded="false">Faut-il être expert·e du développement durable&nbsp;?</button><div class="pn">Non, la formation suffit. Votre rôle n'est pas de faire un cours mais de faciliter : faire émerger les liens entre les 17 Objectifs de développement durable, questionner, accompagner le groupe jusqu'au passage à l'action.</div>
     <button aria-expanded="false">Je n'ai jamais animé d'atelier. Est-ce pour moi&nbsp;?</button><div class="pn">Oui. Beaucoup de nos animateur·rices n'avaient jamais animé. La formation repose sur des mises en situation et un déroulé pas à pas, que vous gardez pour chaque atelier.</div>
     <button aria-expanded="false">Combien coûte le parcours&nbsp;?</button><div class="pn">Le tarif dépend de votre profil (à votre compte ou dans votre structure). Il vous est présenté pendant l'échange, avec un paiement possible en plusieurs fois sans frais.</div>
-    <button aria-expanded="false">À quoi sert l'échange de 30 minutes&nbsp;?</button><div class="pn">À parler de votre projet, répondre à vos questions et vérifier ensemble que le parcours vous correspond. Si c'est le cas, vous choisissez votre date de promo.</div>
+    <button aria-expanded="false">Et si je ne trouve pas d'ateliers à animer&nbsp;?</button><div class="pn">L'Institut Citoyen vous propose des missions rémunérées selon vos disponibilités. Avec la formule Professionnelle, vous recevez aussi un kit commercial et des prix conseillés.</div>
+    <button aria-expanded="false">L'échange m'engage-t-il à quelque chose&nbsp;?</button><div class="pn">Non. C'est un moment pour faire connaissance, répondre à vos questions et vérifier ensemble que le parcours vous correspond.</div>
   </div>
+</div></section>
+
+<section class="lp-final"><div class="wrap">
+  <h2>Prêt·e à faire vivre la Fresque de l'Engagement Durable® près de chez vous ?</h2>
+  <a class="btn btn-w lp-big" href="#candidature">Réserver mon échange</a>
 </div></section>
 </main>
 
 <footer><div class="wrap">
   <img loading="lazy" width="719" height="652" src="/img/institut-citoyen.png" alt="Institut Citoyen">
-  <nav><a href="https://fresque-engagement-durable.org/devenir-animateur/">Devenir animateur·rice</a><a href="https://fresque-engagement-durable.org/l-atelier/">L'atelier</a><a href="mailto:formation@institut-citoyen.org">formation@institut-citoyen.org</a></nav>
-  <div class="leg"><a href="https://fresque-engagement-durable.org/mentions-legales/">Mentions légales</a><a href="https://fresque-engagement-durable.org/confidentialite/">Politique de confidentialité</a><span>© 2026 Institut Citoyen, association loi 1901</span></div>
+  <nav><a href="/devenir-animateur/">Devenir animateur·rice</a><a href="/l-atelier/">L'atelier</a><a href="mailto:formation@institut-citoyen.org">formation@institut-citoyen.org</a></nav>
+  <div class="leg"><a href="/mentions-legales/">Mentions légales</a><a href="/confidentialite/">Politique de confidentialité</a><span>© 2026 Institut Citoyen, association loi 1901</span></div>
 </div></footer>
-<div class="lp-sticky" id="lp-sticky"><a class="btn cta-a" href="#candidature">Rejoindre la prochaine promo</a></div>
+<div class="lp-sticky" id="lp-sticky"><a class="btn cta-a" href="#candidature">Réserver mon échange</a></div>
 
 <script>
 (function(){
@@ -564,45 +636,38 @@ footer .leg a{color:inherit;opacity:.85}
   var $=function(id){return document.getElementById(id);};
   var q=new URLSearchParams(location.search);
 
-  // Accordéon
   document.querySelectorAll('.acc button').forEach(function(x){ x.addEventListener('click', function(){ var o=x.getAttribute('aria-expanded')==='true'; x.setAttribute('aria-expanded', String(!o)); x.nextElementSibling.classList.toggle('open', !o); }); });
 
-  // Bouton flottant mobile : caché quand le formulaire est visible
   var card=$('candidature'), sticky=$('lp-sticky');
   if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ sticky.classList.toggle('off', e[0].isIntersecting); }).observe(card); }
 
-  function show(id){ ['etape-form','etape-rdv','etape-ok','etape-gratuit'].forEach(function(x){ $(x).hidden = (x!==id); }); var t=card.getBoundingClientRect().top+scrollY-80; window.scrollTo({top:t,behavior:'smooth'}); }
+  function show(id){ ['etape-form','etape-rdv','etape-ok','etape-gratuit'].forEach(function(x){ $(x).hidden=(x!==id); });
+    $('s1').className = id==='etape-form' ? 'on' : 'ok'; $('s2').className = id==='etape-rdv' ? 'on' : (id==='etape-ok' ? 'ok' : '');
+    window.scrollTo({top:card.getBoundingClientRect().top+scrollY-84,behavior:'smooth'}); }
   function track(name){ try{ if(window.fbq) fbq('trackCustom', name); if(window.gtag) gtag('event', name); }catch(e){} }
-
   function answer(fields, title){
     for(var i=0;i<fields.length;i++){ var f=fields[i]; if((f.title||'').trim().toLowerCase()===title.toLowerCase()){ var a=f.answer||{}; var v=(a.value!==undefined)?a.value:a.raw; if(Array.isArray(v)) v=v.join(', '); return v?String(v):''; } }
     return '';
   }
-
   function openCalendly(fields){
     var prenom=answer(fields,'Prénom'), nom=answer(fields,'Nom'), email=answer(fields,'E-mail');
     if(prenom) $('rdv-titre').textContent='Merci '+prenom+', votre demande est bien reçue !';
     show('etape-rdv');
-    var opts={ url: CAL+'?hide_gdpr_banner=1&primary_color=f06432', parentElement: $('calendly'),
-      prefill: { name: (prenom+' '+nom).trim(), email: email },
-      utm: { utmSource: q.get('utm_source')||'site', utmMedium: q.get('utm_medium')||'', utmCampaign: q.get('utm_campaign')||'', utmContent: q.get('utm_content')||'' } };
+    var opts={ url: CAL+'?hide_gdpr_banner=1&hide_landing_page_details=1&primary_color=f06432', parentElement: $('calendly'),
+      prefill:{ name:(prenom+' '+nom).trim(), email:email },
+      utm:{ utmSource:q.get('utm_source')||'site', utmMedium:q.get('utm_medium')||'', utmCampaign:q.get('utm_campaign')||'', utmContent:q.get('utm_content')||'' } };
     (function go(n){ if(window.Calendly){ Calendly.initInlineWidget(opts); } else if(n<40){ setTimeout(function(){go(n+1);},150); } })(0);
   }
-
-  // Envoi du formulaire Tally → affichage du calendrier sur la même page
   window.addEventListener('message', function(e){
     if(typeof e.data==='string' && e.data.indexOf('Tally.FormSubmitted')>-1){
       var d; try{ d=JSON.parse(e.data); }catch(err){ return; }
-      var fields=(d.payload&&d.payload.fields)||[];
+      var fields=(d.payload&&d.payload.fields)||[], s=JSON.stringify(fields);
       track('CandidatureAnimateur');
-      if(JSON.stringify(fields).indexOf(OPT_GRATUIT)>-1 || JSON.stringify(fields).indexOf('formation gratuite')>-1){ show('etape-gratuit'); return; }
+      if(s.indexOf(OPT_GRATUIT)>-1 || s.indexOf('formation gratuite')>-1){ show('etape-gratuit'); return; }
       openCalendly(fields);
     }
-    // Créneau réservé dans Calendly
     if(e.data && e.data.event==='calendly.event_scheduled'){ track('RdvAnimateurReserve'); show('etape-ok'); }
   });
-
-  // Chargement Tally (UTM de la page transmises aux champs cachés) et Calendly
   var tl=function(){ if(window.Tally){ Tally.loadEmbeds(); } else { document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(f){ f.src=f.dataset.tallySrc+(location.search?'&'+location.search.slice(1):''); }); } };
   var ts=document.createElement('script'); ts.src='https://tally.so/widgets/embed.js'; ts.onload=tl; ts.onerror=tl; document.body.appendChild(ts);
   var cs=document.createElement('script'); cs.src='https://assets.calendly.com/assets/external/widget.js'; cs.async=true; document.body.appendChild(cs);
