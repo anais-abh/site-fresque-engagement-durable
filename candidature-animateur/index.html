@@ -476,8 +476,35 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-faq .acc{max-width:780px}.lp-faq .acc button{padding:20px 40px 20px 0;font-size:1.02rem}.lp-faq .acc .pn{font-size:.97rem;line-height:1.6;padding-bottom:20px}
 .lp-final{background:var(--o);color:#fff;padding:80px 0;text-align:center}
 .lp-final h2{max-width:720px;margin:0 auto 10px;text-wrap:balance}
+.lp-pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #F1E9E4;border-radius:999px;padding:8px 16px;font-size:.84rem;font-weight:600;margin-bottom:22px}
+.lp-pill i{width:8px;height:8px;border-radius:50%;background:var(--v);box-shadow:0 0 0 4px rgba(84,180,53,.18);flex:none}
+.lp-proof{display:flex;gap:18px;align-items:center;margin-top:4px}
+.lp-proof .lp-faces img{width:46px;height:46px}
+.lp-stars{font-size:.95rem}.lp-stars span{color:#FABE3C;letter-spacing:1px;font-size:1.05rem}
+.lp-proof-t{font-size:.88rem;color:var(--g);margin-top:2px}
+.lp-quote{display:flex;gap:14px;align-items:flex-start;margin:0 40px 34px;padding:20px;background:var(--ov);border-radius:18px}
+.lp-quote img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.lp-quote p{font-size:.9rem;line-height:1.55;font-style:italic;color:var(--e)}
+.lp-quote span{display:block;font-style:normal;font-size:.8rem;color:var(--g);margin-top:6px}
+.lp-video{display:grid;grid-template-columns:auto 1fr;gap:72px;align-items:center}
+.lp-video .reel{width:300px}
+.lp-p{font-size:1.05rem;color:var(--g);line-height:1.65;margin:18px 0 26px;max-width:52ch}
+.lp-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px;margin-bottom:10px}
+.lp-facts div{border:1px solid #F1E9E4;border-radius:16px;padding:16px}
+.lp-facts b{display:block;font-size:1.35rem;font-weight:900;color:var(--o)}.lp-facts span{font-size:.84rem;color:var(--g)}
+.lp-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:40px}
+.lp-cta-row .lp-big{margin-top:0}.lp-cta-row span{font-size:.88rem;color:var(--g)}
+.bg-v .tm{border-color:#F1E9E4}
 .lp-sticky{display:none}
 @media (max-width:960px){
+ .lp-video{grid-template-columns:1fr;gap:36px;justify-items:start}
+ .lp-video .reel{width:min(100%,300px);justify-self:center}
+ .lp-quote{margin:0 20px 26px}
+ .lp-pill{font-size:.78rem;margin-bottom:16px}
+ .lp-proof{margin-top:22px;gap:14px}
+ .lp-proof .lp-faces img{width:38px;height:38px;margin-left:-10px}
+ .lp-proof .lp-faces img:nth-child(n+5){display:none}
+ .lp-stars{font-size:.88rem}.lp-proof-t{font-size:.8rem}
  .lp-grid,.lp-two{grid-template-columns:1fr;gap:36px}
  .lp-hero{padding:30px 0 48px}
  .lp-txt{padding-top:0}
@@ -509,7 +536,7 @@ footer .leg a{color:inherit;opacity:.85}
 <main>
 <header class="lp-hero"><div class="wrap lp-grid">
   <div class="lp-txt">
-    <span class="k">Formation Animateur Citoyen®</span>
+    <span class="lp-pill"><i></i>Prochaine promo : samedi 5 décembre</span>
     <h1>Devenez animateur·rice de la Fresque de l'Engagement Durable®</h1>
     <p class="lp-lede">Animez le grand jeu du développement durable, à votre compte ou dans votre structure. On vous forme en une journée, et on reste à vos côtés ensuite.</p>
 
@@ -519,9 +546,9 @@ footer .leg a{color:inherit;opacity:.85}
       <li><i>✓</i><span><b>Paiement en plusieurs fois</b> sans frais</span></li>
     </ul>
 
-    <div class="lp-team">
-      <div class="lp-faces"><img src="/img/equipe-clement.webp" alt=""><img src="/img/equipe-anais.webp" alt=""></div>
-      <p>Vous échangerez avec <b>notre équipe formation</b>, qui accompagne chaque animateur·rice de A à Z.</p>
+    <div class="lp-proof">
+      <div class="lp-faces"><img src="/img/nelly-marot.webp" alt=""><img src="/img/bruno-lametrie.webp" alt=""><img src="/img/celine-amiet.webp" alt=""><img src="/img/magali-bailly.webp" alt=""><img src="/img/christelle-musin.webp" alt=""><img src="/img/sandrine-detienne.webp" alt=""></div>
+      <div><p class="lp-stars"><span>★★★★★</span> <b>93 % de satisfaction</b></p><p class="lp-proof-t">+50 animateur·rices formé·es, de Lille à Mayotte</p></div>
     </div>
   </div>
 
@@ -555,6 +582,7 @@ footer .leg a{color:inherit;opacity:.85}
       </div>
     </div>
     <p class="lp-safe">2 minutes · Vos réponses restent confidentielles</p>
+    <div class="lp-quote"><img src="/img/equipe-clement.webp" alt=""><p><b style="font-style:normal">Vous échangerez avec Clément</b>, notre responsable de la formation, qui forme et accompagne chaque promo.<span>30 minutes en visio, gratuit et sans engagement</span></p></div>
   </div>
 </div></header>
 
@@ -565,16 +593,28 @@ footer .leg a{color:inherit;opacity:.85}
   <div><b>93 %</b><span>de satisfaction</span></div>
 </div></section>
 
-<section class="lp-s"><div class="wrap">
+<section class="lp-s"><div class="wrap lp-video">
+  <div class="reel"><video src="/video/reel-devenir-animateur.mp4" poster="/video/reel-poster.jpg" muted loop playsinline controls preload="none" aria-label="Vidéo : devenez animateur·rice"></video><div class="badge"><b>93 %</b>de satisfaction</div></div>
+  <div>
+    <span class="k">L'atelier que vous animerez</span>
+    <h2>Le grand jeu du développement durable, clé en main</h2>
+    <p class="lp-p">2h30 pour comprendre les 17 Objectifs de développement durable, imaginer des solutions en groupe et repartir avec un engagement concret. Vous animez, le jeu fait le reste.</p>
+    <div class="lp-facts"><div><b>42</b><span>cartes ODD et Défis</span></div><div><b>2h30</b><span>en présentiel ou en ligne</span></div><div><b>Dès 10 ans</b><span>tous les publics</span></div></div>
+    <a class="btn cta-a lp-big" href="#candidature">Je veux l'animer</a>
+  </div>
+</div></section>
+
+<section class="lp-s bg-v"><div class="wrap">
   <div class="lp-head"><span class="k">Ils et elles ont sauté le pas</span><h2>Des parcours très différents, une même envie de transmettre</h2></div>
   <div class="temo-row">
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/bruno-lametrie.webp" alt="Portrait de Bruno Lamétrie"><div><b>Bruno Lamétrie</b><span>26 ans dans l'eau, puis le Cnam à 50 ans</span></div></div><q>Pas besoin d'être un professionnel du développement durable, ni de la formation.</q><p class="apport"><b>Cela m'a apporté :</b> la légitimité de faire passer des messages de manière ludique.</p></article>
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/nelly-marot.webp" alt="Portrait de Nelly Marot"><div><b>Nelly Marot</b><span>Prévention santé · Mayotte</span></div></div><q>Osez ! Pas besoin d'avoir toutes les réponses pour susciter une prise de conscience.</q><p class="apport"><b>Cela m'a apporté :</b> une sensibilisation moins donneuse de leçons, plus participative.</p></article>
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/magali-bailly.webp" alt="Portrait de Magali Bailly"><div><b>Magali Bailly</b><span>Conseillère info énergie depuis 20 ans</span></div></div><q>Lance-toi : que du positif !</q><p class="apport"><b>Cela m'a apporté :</b> de la confiance en moi.</p></article>
   </div>
+  <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Rejoindre la communauté</a><span>Échange gratuit et sans engagement</span></div>
 </div></section>
 
-<section class="lp-s bg-v"><div class="wrap">
+<section class="lp-s"><div class="wrap">
   <div class="lp-head"><span class="k">Comment ça se passe</span><h2>De votre candidature à votre premier atelier</h2></div>
   <div class="lp-path">
     <div><b>1</b><h3>On échange 30 minutes</h3><p>Votre projet, vos questions, la formule qui vous correspond. Sans engagement.</p></div>
@@ -582,9 +622,10 @@ footer .leg a{color:inherit;opacity:.85}
     <div><b>3</b><h3>Vous vous formez</h3><p>7 heures de mises en situation. Vous recevez votre jeu chez vous.</p></div>
     <div><b>4</b><h3>Vous animez, accompagné·e</h3><p>Rendez-vous du mois, groupe de promo et missions proposées par l'Institut Citoyen.</p></div>
   </div>
+  <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Commencer par l'étape 1</a><span>2 minutes pour candidater</span></div>
 </div></section>
 
-<section class="lp-s"><div class="wrap lp-two">
+<section class="lp-s bg-v"><div class="wrap lp-two">
   <div>
     <div class="lp-head"><span class="k">Le parcours</span><h2>Tout ce qu'il faut pour vous lancer</h2></div>
     <ul class="lp-list">
@@ -605,7 +646,7 @@ footer .leg a{color:inherit;opacity:.85}
   </div>
 </div></section>
 
-<section class="lp-s bg-v"><div class="wrap lp-faq">
+<section class="lp-s"><div class="wrap lp-faq">
   <div class="lp-head"><span class="k">Vos questions</span><h2>Avant de vous lancer</h2></div>
   <div class="acc">
     <button aria-expanded="false">Faut-il être expert·e du développement durable&nbsp;?</button><div class="pn">Non, la formation suffit. Votre rôle n'est pas de faire un cours mais de faciliter : faire émerger les liens entre les 17 Objectifs de développement durable, questionner, accompagner le groupe jusqu'au passage à l'action.</div>
