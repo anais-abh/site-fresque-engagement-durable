@@ -426,7 +426,7 @@ footer .leg a{color:inherit;opacity:.85}
 /* Landing candidature : aérée, réassurance, formulaire au centre */
 .nav .wrap{justify-content:space-between}
 .lp-tel{font-weight:800;font-size:.9rem;color:var(--e)}.lp-tel span{font-weight:600;color:var(--g);margin-right:4px}
-.lp-hero{padding:72px 0 96px;background:linear-gradient(180deg,var(--ov) 0%,#fff 100%)}
+.lp-hero{padding:48px 0 60px;background:linear-gradient(180deg,var(--ov) 0%,#fff 100%)}
 .lp-grid{display:grid;grid-template-columns:1fr minmax(0,500px);gap:64px;align-items:start}
 .lp-txt{padding-top:12px}
 .lp-txt h1{font-size:clamp(2rem,3.6vw,2.9rem);line-height:1.08;margin-top:6px;text-wrap:balance}
@@ -455,8 +455,8 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-stats{padding:34px 0;border-top:1px solid var(--t);border-bottom:1px solid var(--t)}
 .lp-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .lp-stats div{display:flex;flex-direction:column;gap:2px}.lp-stats b{font-size:1.9rem;font-weight:900;color:var(--o);line-height:1.1}.lp-stats span{font-size:.9rem;color:var(--g);font-weight:600}
-.lp-s{padding:104px 0}
-.lp-head{max-width:640px;margin-bottom:48px}.lp-head h2{text-wrap:balance}
+.lp-s{padding:64px 0}
+.lp-head{max-width:660px;margin-bottom:28px}.lp-head h2{text-wrap:balance}
 .temo-row{gap:22px}.tm{padding:24px;gap:14px}
 .lp-path{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .lp-path div{background:#fff;border-radius:22px;padding:26px 24px}
@@ -469,12 +469,16 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-list li::before{content:"✓";flex:none;width:28px;height:28px;border-radius:50%;background:var(--ov);color:var(--of);display:grid;place-items:center;font-weight:900;font-size:.9rem}
 .lp-dates{background:var(--ov);border-radius:26px;padding:32px}
 .lp-dates-t{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--of);margin-bottom:14px}
-.lp-date{display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:10px}
-.lp-date b{font-size:1.1rem;font-weight:900}.lp-date span{font-size:.86rem;color:var(--g);font-weight:600}
+.lp-date{background:#fff;border-radius:14px;padding:16px 20px;margin-bottom:10px}
+.lp-date-r{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
+.lp-date small{display:block;font-size:.8rem;color:var(--g);margin-top:8px}
+.lp-date-r span.hot{color:var(--of)}
+.lp-date b{font-size:1.02rem;font-weight:800}.lp-date-r span{font-size:.84rem;color:var(--vf);font-weight:700;white-space:nowrap}
 .lp-big{padding:15px 28px;font-size:.98rem;margin-top:14px}
 .lp-dates .lp-big{width:100%}
 .lp-faq .acc{max-width:780px}.lp-faq .acc button{padding:20px 40px 20px 0;font-size:1.02rem}.lp-faq .acc .pn{font-size:.97rem;line-height:1.6;padding-bottom:20px}
-.lp-final{background:var(--o);color:#fff;padding:80px 0;text-align:center}
+.lp-final{background:var(--o);color:#fff;padding:56px 0;text-align:center}
+.lp-final-p{opacity:.95;margin-bottom:6px}
 .lp-final h2{max-width:720px;margin:0 auto 10px;text-wrap:balance}
 .lp-pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #F1E9E4;border-radius:999px;padding:8px 16px;font-size:.84rem;font-weight:600;margin-bottom:22px}
 .lp-pill i{width:8px;height:8px;border-radius:50%;background:var(--v);box-shadow:0 0 0 4px rgba(84,180,53,.18);flex:none}
@@ -492,9 +496,19 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px;margin-bottom:10px}
 .lp-facts div{border:1px solid #F1E9E4;border-radius:16px;padding:16px}
 .lp-facts b{display:block;font-size:1.35rem;font-weight:900;color:var(--o)}.lp-facts span{font-size:.84rem;color:var(--g)}
-.lp-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:40px}
+.lp-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:28px}
 .lp-cta-row .lp-big{margin-top:0}.lp-cta-row span{font-size:.88rem;color:var(--g)}
 .bg-v .tm{border-color:#F1E9E4}
+.lp-g{height:8px;background:#F1ECE9;border-radius:99px;overflow:hidden}
+.lp-g i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--o),#FABE3C);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.lp-stats .lp-g{margin-top:10px;max-width:180px}
+.lp-stats b .cnt{font-size:inherit;color:inherit;font-weight:inherit}
+.lp-path em{display:inline-block;margin-top:14px;font-style:normal;font-size:.76rem;font-weight:700;color:var(--of);background:var(--ov);padding:4px 10px;border-radius:999px}
+.lp-path div{transition:transform .2s,box-shadow .2s}.lp-path div:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(201,74,28,.10)}
+.tm{transition:transform .2s,box-shadow .2s}.tm:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.06)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.vu{opacity:1;transform:none}
+.lp-head .lp-p{margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.lp-g i{transition:none}}
 .lp-sticky{display:none}
 @media (max-width:960px){
  .lp-video{grid-template-columns:1fr;gap:36px;justify-items:start}
@@ -513,7 +527,7 @@ footer .leg a{color:inherit;opacity:.85}
  .lp-team{display:none}
  .lp-path{grid-template-columns:1fr 1fr}
  .lp-stats .wrap{grid-template-columns:1fr 1fr}
- .lp-s{padding:60px 0}
+ .lp-s{padding:48px 0}
 }
 @media (max-width:600px){
  .lp-tel span{display:none}
@@ -538,12 +552,12 @@ footer .leg a{color:inherit;opacity:.85}
   <div class="lp-txt">
     <span class="lp-pill"><i></i>Prochaine promo : samedi 5 décembre</span>
     <h1>Devenez animateur·rice de la Fresque de l'Engagement Durable®</h1>
-    <p class="lp-lede">Animez le grand jeu du développement durable, à votre compte ou dans votre structure. On vous forme en une journée, et on reste à vos côtés ensuite.</p>
+    <p class="lp-lede">Faites vivre le grand jeu du développement durable autour de vous, à votre compte ou dans votre structure. Une journée pour vous former, une communauté pour vous lancer.</p>
 
     <ul class="lp-check">
-      <li><i>✓</i><span><b>Un échange de 30 minutes</b>, gratuit et sans engagement, pour parler de votre projet</span></li>
-      <li><i>✓</i><span><b>Aucune expertise requise</b> : beaucoup de nos animateur·rices n'avaient jamais animé</span></li>
-      <li><i>✓</i><span><b>Paiement en plusieurs fois</b> sans frais</span></li>
+      <li><i>✓</i><span><b>Un premier échange offert</b> de 30 minutes pour parler de votre projet</span></li>
+      <li><i>✓</i><span><b>Aucun prérequis</b> : la formation vous donne le déroulé, les outils et la posture</span></li>
+      <li><i>✓</i><span><b>Paiement jusqu'en 4 fois</b> sans frais</span></li>
     </ul>
 
     <div class="lp-proof">
@@ -587,25 +601,25 @@ footer .leg a{color:inherit;opacity:.85}
 </div></header>
 
 <section class="lp-stats"><div class="wrap">
-  <div><b>+50</b><span>animateur·rices formé·es</span></div>
-  <div><b>12</b><span>régions, de Lille à Mayotte</span></div>
-  <div><b>+3 000</b><span>participant·es aux ateliers</span></div>
-  <div><b>93 %</b><span>de satisfaction</span></div>
+  <div><b><span class="cnt" data-to="50" data-pre="+">+50</span></b><span>animateur·rices formé·es</span></div>
+  <div><b><span class="cnt" data-to="12">12</span></b><span>régions, de Lille à Mayotte</span></div>
+  <div><b><span class="cnt" data-to="3000" data-pre="+">+3 000</span></b><span>participant·es aux ateliers</span></div>
+  <div><b><span class="cnt" data-to="93" data-post=" %">93 %</span></b><span>de satisfaction</span><div class="lp-g"><i data-fill="93"></i></div></div>
 </div></section>
 
-<section class="lp-s"><div class="wrap lp-video">
+<section class="lp-s rv"><div class="wrap lp-video">
   <div class="reel"><video src="/video/reel-devenir-animateur.mp4" poster="/video/reel-poster.jpg" muted loop playsinline controls preload="none" aria-label="Vidéo : devenez animateur·rice"></video><div class="badge"><b>93 %</b>de satisfaction</div></div>
   <div>
     <span class="k">L'atelier que vous animerez</span>
-    <h2>Le grand jeu du développement durable, clé en main</h2>
-    <p class="lp-p">2h30 pour comprendre les 17 Objectifs de développement durable, imaginer des solutions en groupe et repartir avec un engagement concret. Vous animez, le jeu fait le reste.</p>
+    <h2>Un atelier qui a fait ses preuves, que vous n'avez pas à inventer</h2>
+    <p class="lp-p">En 2h30, vos participant·es relient les 17 Objectifs de développement durable, imaginent une solution en équipe et repartent avec un engagement concret. Le déroulé est prêt, les cartes font le travail : vous, vous animez.</p>
     <div class="lp-facts"><div><b>42</b><span>cartes ODD et Défis</span></div><div><b>2h30</b><span>en présentiel ou en ligne</span></div><div><b>Dès 10 ans</b><span>tous les publics</span></div></div>
     <a class="btn cta-a lp-big" href="#candidature">Je veux l'animer</a>
   </div>
 </div></section>
 
-<section class="lp-s bg-v"><div class="wrap">
-  <div class="lp-head"><span class="k">Ils et elles ont sauté le pas</span><h2>Des parcours très différents, une même envie de transmettre</h2></div>
+<section class="lp-s rv bg-v"><div class="wrap">
+  <div class="lp-head"><span class="k">Ils et elles ont sauté le pas</span><h2>Ils hésitaient aussi. Aujourd'hui, ils animent.</h2><p class="lp-p">Consultant·es, enseignant·es, conseiller·es, bénévoles : aucun n'était expert·e au départ.</p></div>
   <div class="temo-row">
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/bruno-lametrie.webp" alt="Portrait de Bruno Lamétrie"><div><b>Bruno Lamétrie</b><span>26 ans dans l'eau, puis le Cnam à 50 ans</span></div></div><q>Pas besoin d'être un professionnel du développement durable, ni de la formation.</q><p class="apport"><b>Cela m'a apporté :</b> la légitimité de faire passer des messages de manière ludique.</p></article>
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/nelly-marot.webp" alt="Portrait de Nelly Marot"><div><b>Nelly Marot</b><span>Prévention santé · Mayotte</span></div></div><q>Osez ! Pas besoin d'avoir toutes les réponses pour susciter une prise de conscience.</q><p class="apport"><b>Cela m'a apporté :</b> une sensibilisation moins donneuse de leçons, plus participative.</p></article>
@@ -614,20 +628,20 @@ footer .leg a{color:inherit;opacity:.85}
   <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Rejoindre la communauté</a><span>Échange gratuit et sans engagement</span></div>
 </div></section>
 
-<section class="lp-s"><div class="wrap">
-  <div class="lp-head"><span class="k">Comment ça se passe</span><h2>De votre candidature à votre premier atelier</h2></div>
+<section class="lp-s rv"><div class="wrap">
+  <div class="lp-head"><span class="k">Comment ça se passe</span><h2>4 étapes, et vous animez votre premier atelier</h2></div>
   <div class="lp-path">
-    <div><b>1</b><h3>On échange 30 minutes</h3><p>Votre projet, vos questions, la formule qui vous correspond. Sans engagement.</p></div>
-    <div><b>2</b><h3>Vous choisissez votre date</h3><p>Une promo de 6 à 8 personnes, le samedi, en ligne ou à Paris.</p></div>
-    <div><b>3</b><h3>Vous vous formez</h3><p>7 heures de mises en situation. Vous recevez votre jeu chez vous.</p></div>
-    <div><b>4</b><h3>Vous animez, accompagné·e</h3><p>Rendez-vous du mois, groupe de promo et missions proposées par l'Institut Citoyen.</p></div>
+    <div><b>1</b><h3>On fait connaissance</h3><p>30 minutes en visio pour parler de votre projet et trouver la formule qui vous va.</p><em>Aujourd'hui</em></div>
+    <div><b>2</b><h3>Vous réservez votre place</h3><p>Vous choisissez votre samedi et rejoignez une promo de 6 à 8 personnes.</p><em>Le jour même</em></div>
+    <div><b>3</b><h3>Vous vous formez</h3><p>Une journée de mises en situation, en ligne ou à Paris. Votre jeu arrive chez vous.</p><em>En 1 journée</em></div>
+    <div><b>4</b><h3>Vous animez, jamais seul·e</h3><p>Rendez-vous du mois, groupe de promo et missions proposées par l'Institut Citoyen.</p><em>Dès les semaines suivantes</em></div>
   </div>
-  <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Commencer par l'étape 1</a><span>2 minutes pour candidater</span></div>
+  <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Je commence l'étape 1</a><span>2 minutes pour candidater</span></div>
 </div></section>
 
-<section class="lp-s bg-v"><div class="wrap lp-two">
+<section class="lp-s rv bg-v"><div class="wrap lp-two">
   <div>
-    <div class="lp-head"><span class="k">Le parcours</span><h2>Tout ce qu'il faut pour vous lancer</h2></div>
+    <div class="lp-head"><span class="k">Tout est compris</span><h2>Vous repartez avec tout ce qu'il faut pour animer</h2></div>
     <ul class="lp-list">
       <li>Une journée de formation à l'animation</li>
       <li>Le jeu de 42 cartes, livré chez vous</li>
@@ -639,15 +653,15 @@ footer .leg a{color:inherit;opacity:.85}
   </div>
   <div class="lp-dates">
     <p class="lp-dates-t">Prochaines promos</p>
-    <div class="lp-date"><b>Sam. 5 déc.</b><span>En ligne</span></div>
-    <div class="lp-date"><b>Sam. 19 déc.</b><span>En ligne</span></div>
-    <div class="lp-date"><b>Sam. 9 janv.</b><span>2027</span></div>
-    <a class="btn cta-a lp-big" href="#candidature">Je rejoins la prochaine promo</a>
+    <div class="lp-date"><div class="lp-date-r"><b>Samedi 5 décembre</b><span class="hot">Plus que 5 places</span></div><div class="lp-g"><i data-fill="50"></i></div><small>En ligne · 5 inscrit·es sur 10</small></div>
+    <div class="lp-date"><div class="lp-date-r"><b>Samedi 19 décembre</b><span>8 places</span></div><div class="lp-g"><i data-fill="20"></i></div><small>En ligne · 2 inscrit·es sur 10</small></div>
+    <div class="lp-date"><div class="lp-date-r"><b>Samedi 9 janvier</b><span>Ouverte</span></div><div class="lp-g"><i data-fill="4"></i></div><small>Inscriptions ouvertes</small></div>
+    <a class="btn cta-a lp-big" href="#candidature">Je réserve ma place</a>
   </div>
 </div></section>
 
-<section class="lp-s"><div class="wrap lp-faq">
-  <div class="lp-head"><span class="k">Vos questions</span><h2>Avant de vous lancer</h2></div>
+<section class="lp-s rv"><div class="wrap lp-faq">
+  <div class="lp-head"><span class="k">Vos questions</span><h2>Ce qu'on nous demande le plus souvent</h2></div>
   <div class="acc">
     <button aria-expanded="false">Faut-il être expert·e du développement durable&nbsp;?</button><div class="pn">Non, la formation suffit. Votre rôle n'est pas de faire un cours mais de faciliter : faire émerger les liens entre les 17 Objectifs de développement durable, questionner, accompagner le groupe jusqu'au passage à l'action.</div>
     <button aria-expanded="false">Je n'ai jamais animé d'atelier. Est-ce pour moi&nbsp;?</button><div class="pn">Oui. Beaucoup de nos animateur·rices n'avaient jamais animé. La formation repose sur des mises en situation et un déroulé pas à pas, que vous gardez pour chaque atelier.</div>
@@ -658,8 +672,9 @@ footer .leg a{color:inherit;opacity:.85}
 </div></section>
 
 <section class="lp-final"><div class="wrap">
-  <h2>Prêt·e à faire vivre la Fresque de l'Engagement Durable® près de chez vous ?</h2>
-  <a class="btn btn-w lp-big" href="#candidature">Réserver mon échange</a>
+  <h2>Votre aventure d'animateur·rice commence par 30 minutes d'échange</h2>
+  <p class="lp-final-p">Gratuit, sans engagement, et au moment qui vous arrange.</p>
+  <a class="btn btn-w lp-big" href="#candidature">Je réserve mon échange</a>
 </div></section>
 </main>
 
@@ -679,6 +694,20 @@ footer .leg a{color:inherit;opacity:.85}
 
   document.querySelectorAll('.acc button').forEach(function(x){ x.addEventListener('click', function(){ var o=x.getAttribute('aria-expanded')==='true'; x.setAttribute('aria-expanded', String(!o)); x.nextElementSibling.classList.toggle('open', !o); }); });
 
+
+  // Apparition des sections, jauges et compteurs
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function fill(root){ root.querySelectorAll('.lp-g i').forEach(function(i){ i.style.width=i.dataset.fill+'%'; }); }
+  function count(el){ var to=+el.dataset.to, pre=el.dataset.pre||'', post=el.dataset.post||'', t0=null, d=1400;
+    if(reduce){ return; }
+    function f(n){ return n>=1000 ? Math.round(n).toLocaleString('fr-FR').replace(/\u202f|\u00a0/g,' ') : Math.round(n); }
+    function step(t){ if(!t0) t0=t; var k=Math.min((t-t0)/d,1), e=1-Math.pow(1-k,3); el.textContent=pre+f(to*e)+post; if(k<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step); }
+  var targets=document.querySelectorAll('.rv,.lp-stats,.lp-dates');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting) return; var el=e.target; el.classList.add('vu'); fill(el); el.querySelectorAll('.cnt').forEach(count); io.unobserve(el); }); },{threshold:.18});
+    targets.forEach(function(t){ io.observe(t); });
+  } else { targets.forEach(function(t){ t.classList.add('vu'); fill(t); }); }
   var card=$('candidature'), sticky=$('lp-sticky');
   if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ sticky.classList.toggle('off', e[0].isIntersecting); }).observe(card); }
 
