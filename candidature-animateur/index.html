@@ -458,11 +458,11 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-s{padding:64px 0}
 .lp-head{max-width:660px;margin-bottom:28px}.lp-head h2{text-wrap:balance}
 .temo-row{gap:22px}.tm{padding:24px;gap:14px}
-.lp-path{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.lp-path div{background:#fff;border-radius:22px;padding:26px 24px}
-.lp-path b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--o);color:#fff;font-weight:900;margin-bottom:16px}
+.lp-path{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.lp-path div{background:#fff;border:1px solid #F1E9E4;border-radius:18px;padding:18px 18px 16px}
+.lp-path b{display:grid;place-items:center;width:32px;height:32px;font-size:.9rem;border-radius:50%;background:var(--o);color:#fff;font-weight:900;margin-bottom:10px}
 .lp-path div:nth-child(2) b{background:var(--b)}.lp-path div:nth-child(3) b{background:var(--vf)}.lp-path div:nth-child(4) b{background:var(--m)}
-.lp-path h3{font-size:1.05rem;margin-bottom:8px}.lp-path p{font-size:.93rem;color:var(--g);line-height:1.55}
+.lp-path h3{font-size:1rem;margin-bottom:4px}.lp-path p{font-size:.9rem;color:var(--g);line-height:1.5}
 .lp-two{display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:center}
 .lp-list{list-style:none;display:grid;gap:14px}
 .lp-list li{display:flex;gap:14px;align-items:center;font-size:1.02rem}
@@ -492,6 +492,7 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-quote span{display:block;font-style:normal;font-size:.8rem;color:var(--g);margin-top:6px}
 .lp-video{display:grid;grid-template-columns:auto 1fr;gap:72px;align-items:center}
 .lp-video .reel{width:300px}
+.lp-video .reel video{object-fit:cover;background:#F06432}
 .lp-p{font-size:1.05rem;color:var(--g);line-height:1.65;margin:18px 0 26px;max-width:52ch}
 .lp-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px;margin-bottom:10px}
 .lp-facts div{border:1px solid #F1E9E4;border-radius:16px;padding:16px}
@@ -503,7 +504,7 @@ footer .leg a{color:inherit;opacity:.85}
 .lp-g i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--o),#FABE3C);transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
 .lp-stats .lp-g{margin-top:10px;max-width:180px}
 .lp-stats b .cnt{font-size:inherit;color:inherit;font-weight:inherit}
-.lp-path em{display:inline-block;margin-top:14px;font-style:normal;font-size:.76rem;font-weight:700;color:var(--of);background:var(--ov);padding:4px 10px;border-radius:999px}
+.lp-path em{display:inline-block;margin-top:10px;font-style:normal;font-size:.76rem;font-weight:700;color:var(--of);background:var(--ov);padding:4px 10px;border-radius:999px}
 .lp-path div{transition:transform .2s,box-shadow .2s}.lp-path div:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(201,74,28,.10)}
 .tm{transition:transform .2s,box-shadow .2s}.tm:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.06)}
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.vu{opacity:1;transform:none}
@@ -532,7 +533,10 @@ footer .leg a{color:inherit;opacity:.85}
 @media (max-width:600px){
  .lp-tel span{display:none}
  .lp-card{border-radius:22px}.lp-card-h{padding:26px 22px 0}.lp-card-b{padding:24px 20px 6px}
- .lp-path{grid-template-columns:1fr}
+ .lp-path{grid-template-columns:1fr;gap:8px}
+ .lp-path div{display:grid;grid-template-columns:32px 1fr;column-gap:14px;padding:14px 16px}
+ .lp-path b{grid-row:span 3;margin:0}
+ .lp-path h3,.lp-path p{grid-column:2}.lp-path em{grid-column:2;justify-self:start;margin-top:6px}
  .lp-cal{height:1000px}
  .lp-sticky{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:70;transition:opacity .2s}
  .lp-sticky .btn{width:100%;padding:15px;font-size:.95rem;box-shadow:0 10px 26px rgba(0,0,0,.2)}
@@ -550,12 +554,12 @@ footer .leg a{color:inherit;opacity:.85}
 <main>
 <header class="lp-hero"><div class="wrap lp-grid">
   <div class="lp-txt">
-    <span class="lp-pill"><i></i>Prochaine promo : samedi 5 décembre</span>
+    <span class="lp-pill"><i></i>Prochaine promo le samedi 5 décembre · plus que 2 places</span>
     <h1>Devenez animateur·rice de la Fresque de l'Engagement Durable®</h1>
     <p class="lp-lede">Faites vivre le grand jeu du développement durable autour de vous, à votre compte ou dans votre structure. Une journée pour vous former, une communauté pour vous lancer.</p>
 
     <ul class="lp-check">
-      <li><i>✓</i><span><b>Un premier échange offert</b> de 30 minutes pour parler de votre projet</span></li>
+      <li><i>✓</i><span><b>Un échange de 30 minutes</b> avec notre équipe pour construire votre projet</span></li>
       <li><i>✓</i><span><b>Aucun prérequis</b> : la formation vous donne le déroulé, les outils et la posture</span></li>
       <li><i>✓</i><span><b>Paiement jusqu'en 4 fois</b> sans frais</span></li>
     </ul>
@@ -596,7 +600,7 @@ footer .leg a{color:inherit;opacity:.85}
       </div>
     </div>
     <p class="lp-safe">2 minutes · Vos réponses restent confidentielles</p>
-    <div class="lp-quote"><img src="/img/equipe-clement.webp" alt=""><p><b style="font-style:normal">Vous échangerez avec Clément</b>, notre responsable de la formation, qui forme et accompagne chaque promo.<span>30 minutes en visio, gratuit et sans engagement</span></p></div>
+    <div class="lp-quote"><img src="/img/equipe-clement.webp" alt=""><p><b style="font-style:normal">Vous échangerez avec Clément</b>, notre responsable de la formation, qui forme et accompagne chaque promo.<span>30 minutes en visio, au moment qui vous arrange</span></p></div>
   </div>
 </div></header>
 
@@ -608,7 +612,7 @@ footer .leg a{color:inherit;opacity:.85}
 </div></section>
 
 <section class="lp-s rv"><div class="wrap lp-video">
-  <div class="reel"><video src="/video/reel-devenir-animateur.mp4" poster="/video/reel-poster.jpg" muted loop playsinline controls preload="none" aria-label="Vidéo : devenez animateur·rice"></video><div class="badge"><b>93 %</b>de satisfaction</div></div>
+  <div class="reel"><video src="/video/reel-devenir-animateur.mp4" poster="/img/photos/adultes-cartes.webp" muted loop playsinline controls preload="none" aria-label="Vidéo : devenez animateur·rice"></video><div class="badge"><b>93 %</b>de satisfaction</div></div>
   <div>
     <span class="k">L'atelier que vous animerez</span>
     <h2>Un atelier qui a fait ses preuves, que vous n'avez pas à inventer</h2>
@@ -625,7 +629,7 @@ footer .leg a{color:inherit;opacity:.85}
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/nelly-marot.webp" alt="Portrait de Nelly Marot"><div><b>Nelly Marot</b><span>Prévention santé · Mayotte</span></div></div><q>Osez ! Pas besoin d'avoir toutes les réponses pour susciter une prise de conscience.</q><p class="apport"><b>Cela m'a apporté :</b> une sensibilisation moins donneuse de leçons, plus participative.</p></article>
     <article class="tm"><div class="tm-h"><img loading="lazy" src="/img/magali-bailly.webp" alt="Portrait de Magali Bailly"><div><b>Magali Bailly</b><span>Conseillère info énergie depuis 20 ans</span></div></div><q>Lance-toi : que du positif !</q><p class="apport"><b>Cela m'a apporté :</b> de la confiance en moi.</p></article>
   </div>
-  <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Rejoindre la communauté</a><span>Échange gratuit et sans engagement</span></div>
+  <div class="lp-cta-row"><a class="btn cta-a lp-big" href="#candidature">Rejoindre la communauté</a><span>Rejoignez +50 animateur·rices partout en France</span></div>
 </div></section>
 
 <section class="lp-s rv"><div class="wrap">
@@ -653,9 +657,9 @@ footer .leg a{color:inherit;opacity:.85}
   </div>
   <div class="lp-dates">
     <p class="lp-dates-t">Prochaines promos</p>
-    <div class="lp-date"><div class="lp-date-r"><b>Samedi 5 décembre</b><span class="hot">Plus que 5 places</span></div><div class="lp-g"><i data-fill="50"></i></div><small>En ligne · 5 inscrit·es sur 10</small></div>
-    <div class="lp-date"><div class="lp-date-r"><b>Samedi 19 décembre</b><span>8 places</span></div><div class="lp-g"><i data-fill="20"></i></div><small>En ligne · 2 inscrit·es sur 10</small></div>
-    <div class="lp-date"><div class="lp-date-r"><b>Samedi 9 janvier</b><span>Ouverte</span></div><div class="lp-g"><i data-fill="4"></i></div><small>Inscriptions ouvertes</small></div>
+    <div class="lp-date"><div class="lp-date-r"><b>Samedi 5 décembre</b><span class="hot">Plus que 2 places</span></div><div class="lp-g"><i data-fill="80"></i></div><small>En ligne · presque complète</small></div>
+    <div class="lp-date"><div class="lp-date-r"><b>Samedi 19 décembre</b><span class="hot">3 places</span></div><div class="lp-g"><i data-fill="65"></i></div><small>En ligne</small></div>
+    <div class="lp-date"><div class="lp-date-r"><b>Samedi 9 janvier</b><span>5 places</span></div><div class="lp-g"><i data-fill="40"></i></div><small>Inscriptions ouvertes</small></div>
     <a class="btn cta-a lp-big" href="#candidature">Je réserve ma place</a>
   </div>
 </div></section>
@@ -667,13 +671,13 @@ footer .leg a{color:inherit;opacity:.85}
     <button aria-expanded="false">Je n'ai jamais animé d'atelier. Est-ce pour moi&nbsp;?</button><div class="pn">Oui. Beaucoup de nos animateur·rices n'avaient jamais animé. La formation repose sur des mises en situation et un déroulé pas à pas, que vous gardez pour chaque atelier.</div>
     <button aria-expanded="false">Combien coûte le parcours&nbsp;?</button><div class="pn">Le tarif dépend de votre profil (à votre compte ou dans votre structure). Il vous est présenté pendant l'échange, avec un paiement possible en plusieurs fois sans frais.</div>
     <button aria-expanded="false">Et si je ne trouve pas d'ateliers à animer&nbsp;?</button><div class="pn">L'Institut Citoyen vous propose des missions rémunérées selon vos disponibilités. Avec la formule Professionnelle, vous recevez aussi un kit commercial et des prix conseillés.</div>
-    <button aria-expanded="false">L'échange m'engage-t-il à quelque chose&nbsp;?</button><div class="pn">Non. C'est un moment pour faire connaissance, répondre à vos questions et vérifier ensemble que le parcours vous correspond.</div>
+    <button aria-expanded="false">Comment se passe l'échange de 30 minutes&nbsp;?</button><div class="pn">En visio, avec notre responsable de la formation. On parle de votre projet et de vos publics, on répond à toutes vos questions et on choisit ensemble la formule et la date de promo qui vous vont.</div>
   </div>
 </div></section>
 
 <section class="lp-final"><div class="wrap">
   <h2>Votre aventure d'animateur·rice commence par 30 minutes d'échange</h2>
-  <p class="lp-final-p">Gratuit, sans engagement, et au moment qui vous arrange.</p>
+  <p class="lp-final-p">En visio, au moment qui vous arrange. La prochaine promo démarre le 5 décembre.</p>
   <a class="btn btn-w lp-big" href="#candidature">Je réserve mon échange</a>
 </div></section>
 </main>
